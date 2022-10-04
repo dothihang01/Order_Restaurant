@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageViewController" customModule="Order_Restaurant" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vLx-sd-9vE">
+                    <rect key="frame" x="16" y="44" width="382" height="46"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="WQ8-QL-MJ7">
+                            <rect key="frame" x="0.0" y="0.0" width="177" height="46"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAq-8r-QZi">
+                            <rect key="frame" x="326" y="0.0" width="56" height="46"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon32PxLineScan"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="YAq-8r-QZi" firstAttribute="top" secondItem="vLx-sd-9vE" secondAttribute="top" id="NQG-vj-zpL"/>
+                        <constraint firstAttribute="trailing" secondItem="YAq-8r-QZi" secondAttribute="trailing" id="PqF-W9-hpf"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="503-4k-26M">
+                    <rect key="frame" x="17" y="100" width="397" height="46"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tìm kiếm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2m-p4-oja" customClass="TextField" customModule="Order_Restaurant" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="341" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="textField" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1N-Y6-VsX">
+                            <rect key="frame" x="341" y="0.0" width="56" height="46"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="icon32PxLineFilter"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-8E-gBS">
+                    <rect key="frame" x="16" y="156" width="382" height="304"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6q1-IY-k41">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x6J-Di-cwF">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="6q1-IY-k41" secondAttribute="trailing" id="8Rc-cy-gf3"/>
+                        <constraint firstItem="6q1-IY-k41" firstAttribute="centerX" secondItem="LqT-8E-gBS" secondAttribute="centerX" id="AyZ-Mw-pTH"/>
+                        <constraint firstItem="6q1-IY-k41" firstAttribute="top" secondItem="LqT-8E-gBS" secondAttribute="top" id="M3r-o7-U1D"/>
+                        <constraint firstItem="6q1-IY-k41" firstAttribute="leading" secondItem="LqT-8E-gBS" secondAttribute="leading" id="gyu-Gv-G1H"/>
+                        <constraint firstAttribute="bottom" secondItem="6q1-IY-k41" secondAttribute="bottom" id="vTt-hp-lqb"/>
+                        <constraint firstItem="6q1-IY-k41" firstAttribute="centerY" secondItem="LqT-8E-gBS" secondAttribute="centerY" id="wte-8T-M02"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LqT-8E-gBS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4By-al-QFH"/>
+                <constraint firstItem="503-4k-26M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="17" id="65i-DP-62B"/>
+                <constraint firstItem="vLx-sd-9vE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7g8-Qt-Wt6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vLx-sd-9vE" secondAttribute="trailing" constant="16" id="KHs-Bo-CZH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LqT-8E-gBS" secondAttribute="trailing" constant="16" id="NDe-Zv-7ML"/>
+                <constraint firstItem="vLx-sd-9vE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YzM-r4-ImX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LqT-8E-gBS" secondAttribute="bottom" constant="402" id="c3t-M2-Tgx"/>
+                <constraint firstItem="503-4k-26M" firstAttribute="top" secondItem="vLx-sd-9vE" secondAttribute="bottom" constant="10" id="hLX-pg-4Tv"/>
+                <constraint firstItem="vLx-sd-9vE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ibo-Oy-FEI"/>
+                <constraint firstItem="LqT-8E-gBS" firstAttribute="top" secondItem="503-4k-26M" secondAttribute="bottom" constant="10" id="thR-ko-Qs7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="503-4k-26M" secondAttribute="trailing" id="y1U-Ib-Xiu"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="99"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="B2m-p4-oja">
+            <size key="intrinsicContentSize" width="98" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon32PxLineFilter" width="32" height="32"/>
+        <image name="icon32PxLineScan" width="32" height="32"/>
+        <image name="logo" width="177" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
