@@ -8,22 +8,41 @@
 import UIKit
 
 class FavouriteViewController: UIViewController {
+    
 
+    @IBOutlet weak var favouriteCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        favouriteCollectionView.dataSource = self
+        favouriteCollectionView.delegate = self
+        self.favouriteCollectionView.register(UINib(nibName: "CustomFavouriteCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customFavouriteCollectionViewCell")
     }
 
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+ 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customFavouriteCollectionViewCell", for: indexPath) as! CustomFavouriteCollectionViewCell
+        cell.layer.cornerRadius = 6
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: favouriteCollectionView.bounds.width, height: 80)
+    }
+    
+    
 }

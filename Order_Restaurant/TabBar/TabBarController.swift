@@ -11,19 +11,28 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBackground
+           UITabBar.appearance().barTintColor = .systemBackground
+           tabBar.tintColor = .label
+           setupVCs()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupVCs() {
+        viewControllers = [
+            createNavController(for: HomePageViewController(), image: UIImage(systemName: "house")!),
+            createNavController(for: FavouriteViewController(), image: UIImage(systemName: "heart")!),
+            createNavController(for: YourMenuViewController(), image: UIImage(systemName: "menucard")!),
+            createNavController(for: ViewController(), image: UIImage(systemName: "person")!)
+        ]
     }
-    */
+    
+    fileprivate func createNavController(for rootViewController: UIViewController, image: UIImage) -> UIViewController {
+            let navController = UINavigationController(rootViewController: rootViewController)
+            navController.tabBarItem.image = image
+            navController.navigationBar.prefersLargeTitles = false
+            rootViewController.navigationItem.title = nil
+            return navController
+    }
 
 }
+    

@@ -9,6 +9,7 @@ import UIKit
 
 class CustomVisitedCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imageRestaurant: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

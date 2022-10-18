@@ -1,29 +1,22 @@
+////
+////  ReviewOfCustomerViewController.swift
+////  Order_Restaurant
+////
+////  Created by Nguyen Hung on 11/10/2022.
+////
 //
-//  ReviewOfCustomerViewController.swift
-//  Order_Restaurant
+//import UIKit
 //
-//  Created by Nguyen Hung on 11/10/2022.
+//class ReviewOfCustomerViewController: UIViewController {
 //
-
-import UIKit
-
-class ReviewOfCustomerViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+//    @IBOutlet weak var ReviewCollection: UICollectionView!
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        ReviewCollection.delegate = self
+//        ReviewCollection.dataSource = self
+//    }
+//}
+//
+//extension ReviewOfCustomerViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewFlowLayout {
+//
+//}

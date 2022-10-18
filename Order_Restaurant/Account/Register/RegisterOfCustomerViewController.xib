@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,21 +43,6 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="textField" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-cy-1W2" customClass="Button" customModule="Order_Restaurant" customModuleProvider="target">
-                    <rect key="frame" x="16" y="397" width="382" height="48"/>
-                    <color key="backgroundColor" red="1" green="0.44705882349999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="48" id="GDc-5J-NQ8"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Đăng ký">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="button" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn đã có tài khoản chưa?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkA-uf-or8">
                     <rect key="frame" x="91" y="739" width="232" height="21"/>
                     <constraints>
@@ -81,25 +67,83 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="button" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-cy-1W2" customClass="Button" customModule="Order_Restaurant" customModuleProvider="target">
+                    <rect key="frame" x="16" y="451" width="382" height="48"/>
+                    <color key="backgroundColor" red="1" green="0.44705882349999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="GDc-5J-NQ8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Đăng ký">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="button" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="spo-8M-EGp">
+                    <rect key="frame" x="16" y="369" width="382" height="42"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-0H-b8o">
+                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="42"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLF-Ys-wY4">
+                                    <rect key="frame" x="0.0" y="0.0" width="104.5" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hP-NZ-Ft5">
+                                    <rect key="frame" x="114.5" y="0.0" width="20" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="record.circle.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="WsK-2H-oYl">
+                            <rect key="frame" x="264.5" y="0.0" width="117.5" height="42"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhà hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qib-VI-XuF">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="42"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-0P-Ak5">
+                                    <rect key="frame" x="95" y="0.0" width="22.5" height="42"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="record.circle.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="JiM-ZW-uws"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ObK-7N-fhZ"/>
             <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.97255116699999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="YkA-uf-or8" firstAttribute="leading" secondItem="ObK-7N-fhZ" secondAttribute="leading" constant="91" id="0lg-yi-oCp"/>
                 <constraint firstItem="CFX-fP-D2x" firstAttribute="centerX" secondItem="HhA-Ua-2pX" secondAttribute="centerX" id="0tT-E5-ecx"/>
+                <constraint firstItem="spo-8M-EGp" firstAttribute="leading" secondItem="ObK-7N-fhZ" secondAttribute="leading" constant="16" id="1ML-mH-iiy"/>
                 <constraint firstItem="rq0-gT-UIi" firstAttribute="top" secondItem="ObK-7N-fhZ" secondAttribute="top" constant="16" id="2lH-kc-NbN"/>
                 <constraint firstItem="2Mg-Uc-aB7" firstAttribute="leading" secondItem="ObK-7N-fhZ" secondAttribute="leading" constant="16" id="3EN-eq-x5H"/>
                 <constraint firstItem="YkA-uf-or8" firstAttribute="centerX" secondItem="HhA-Ua-2pX" secondAttribute="centerX" id="3VB-lo-vRm"/>
                 <constraint firstItem="ObK-7N-fhZ" firstAttribute="trailing" secondItem="6dC-mj-uWt" secondAttribute="trailing" constant="16" id="CYc-9T-CDI"/>
+                <constraint firstItem="ObK-7N-fhZ" firstAttribute="trailing" secondItem="spo-8M-EGp" secondAttribute="trailing" constant="16" id="E1Q-Wt-jJH"/>
                 <constraint firstItem="ObK-7N-fhZ" firstAttribute="trailing" secondItem="CFX-fP-D2x" secondAttribute="trailing" constant="18" id="G2Q-AE-SJc"/>
-                <constraint firstItem="Nma-cy-1W2" firstAttribute="top" secondItem="2Mg-Uc-aB7" secondAttribute="bottom" constant="48" id="HJm-Su-bUZ"/>
                 <constraint firstItem="ObK-7N-fhZ" firstAttribute="bottom" secondItem="CFX-fP-D2x" secondAttribute="bottom" constant="38" id="HWf-63-usk"/>
                 <constraint firstItem="6dC-mj-uWt" firstAttribute="leading" secondItem="ObK-7N-fhZ" secondAttribute="leading" constant="16" id="HZw-Dp-w5z"/>
                 <constraint firstItem="6dC-mj-uWt" firstAttribute="top" secondItem="HhA-Ua-2pX" secondAttribute="top" constant="237" id="NY7-tr-LV2"/>
+                <constraint firstItem="Nma-cy-1W2" firstAttribute="top" secondItem="spo-8M-EGp" secondAttribute="bottom" constant="40" id="XWO-cn-5CH"/>
                 <constraint firstItem="ObK-7N-fhZ" firstAttribute="trailing" secondItem="Nma-cy-1W2" secondAttribute="trailing" constant="16" id="ZiE-BK-7Vd"/>
                 <constraint firstItem="Nma-cy-1W2" firstAttribute="leading" secondItem="ObK-7N-fhZ" secondAttribute="leading" constant="16" id="Zyn-Hq-3d6"/>
                 <constraint firstItem="ObK-7N-fhZ" firstAttribute="trailing" secondItem="YkA-uf-or8" secondAttribute="trailing" constant="91" id="hIH-zO-QSZ"/>
-                <constraint firstItem="Nma-cy-1W2" firstAttribute="centerX" secondItem="HhA-Ua-2pX" secondAttribute="centerX" id="j2j-VO-O1D"/>
+                <constraint firstItem="spo-8M-EGp" firstAttribute="top" secondItem="2Mg-Uc-aB7" secondAttribute="bottom" constant="20" id="m11-TE-ku2"/>
                 <constraint firstItem="2Mg-Uc-aB7" firstAttribute="top" secondItem="6dC-mj-uWt" secondAttribute="bottom" constant="16" id="nPc-3K-ac6"/>
                 <constraint firstItem="CFX-fP-D2x" firstAttribute="centerX" secondItem="HhA-Ua-2pX" secondAttribute="centerX" id="nXc-he-iUU"/>
                 <constraint firstItem="CFX-fP-D2x" firstAttribute="top" secondItem="YkA-uf-or8" secondAttribute="bottom" constant="16" id="vdH-pz-jMv"/>
@@ -112,19 +156,20 @@
     </objects>
     <designables>
         <designable name="2Mg-Uc-aB7">
-            <size key="intrinsicContentSize" width="98.5" height="34"/>
+            <size key="intrinsicContentSize" width="87" height="34"/>
         </designable>
         <designable name="6dC-mj-uWt">
-            <size key="intrinsicContentSize" width="146.5" height="34"/>
+            <size key="intrinsicContentSize" width="116" height="34"/>
         </designable>
         <designable name="CFX-fP-D2x">
-            <size key="intrinsicContentSize" width="107.5" height="34.5"/>
+            <size key="intrinsicContentSize" width="108" height="30"/>
         </designable>
         <designable name="Nma-cy-1W2">
-            <size key="intrinsicContentSize" width="63" height="33"/>
+            <size key="intrinsicContentSize" width="63" height="28"/>
         </designable>
     </designables>
     <resources>
         <image name="logo" width="177" height="23"/>
+        <image name="record.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
