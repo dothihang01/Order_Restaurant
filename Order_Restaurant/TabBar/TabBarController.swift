@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
             createNavController(for: HomePageViewController(), image: UIImage(systemName: "house")!),
             createNavController(for: FavouriteViewController(), image: UIImage(systemName: "heart")!),
             createNavController(for: YourMenuViewController(), image: UIImage(systemName: "menucard")!),
-            createNavController(for: ViewController(), image: UIImage(systemName: "person")!)
+            createNavController(for: InfomationCustomerViewController(), image: UIImage(systemName: "person")!)
         ]
     }
     

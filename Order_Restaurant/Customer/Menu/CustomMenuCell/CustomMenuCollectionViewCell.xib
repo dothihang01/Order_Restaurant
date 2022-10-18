@@ -125,7 +125,7 @@
                 <constraint firstAttribute="bottom" secondItem="0fB-xl-LFi" secondAttribute="bottom" constant="10" id="yov-Nw-BWH"/>
             </constraints>
             <size key="customSize" width="330" height="100"/>
-            <point key="canvasLocation" x="304.34782608695656" y="98.4375"/>
+            <point key="canvasLocation" x="292.75362318840581" y="43.526785714285715"/>
         </collectionViewCell>
     </objects>
     <resources>
