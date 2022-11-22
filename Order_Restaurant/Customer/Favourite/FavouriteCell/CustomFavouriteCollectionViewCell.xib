@@ -51,7 +51,7 @@
                         </constraints>
                         <color key="tintColor" red="1" green="0.44705882349999998" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="heart" catalog="system"/>
+                        <state key="normal" image="Favorite-1"/>
                     </button>
                 </subviews>
             </view>
@@ -67,11 +67,16 @@
                 <constraint firstItem="M0p-Yq-UBL" firstAttribute="leading" secondItem="scd-t2-aCt" secondAttribute="trailing" constant="6" id="zp0-ss-qwV"/>
             </constraints>
             <size key="customSize" width="306" height="50"/>
+            <connections>
+                <outlet property="addressRes" destination="JDN-S1-Ucc" id="X6D-Oc-8mA"/>
+                <outlet property="imgRes" destination="scd-t2-aCt" id="C6I-Pl-s98"/>
+                <outlet property="nameRes" destination="hiO-3d-Xai" id="E8Q-kq-kgg"/>
+            </connections>
             <point key="canvasLocation" x="349.27536231884062" y="-2.0089285714285712"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="Ellipse 4" width="39" height="39"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="Favorite-1" width="32" height="32"/>
     </resources>
 </document>

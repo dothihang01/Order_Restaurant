@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Zs-2a-GwY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Gk4-ju-Vnl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Zs-2a-GwY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sg1-Ch-apz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EBk-cf-AFK" kind="relationship" relationship="rootViewController" id="lA8-TQ-p5p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJr-7p-wLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="38"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="VX2-bB-pZb">
+            <objects>
+                <viewController storyboardIdentifier="main" id="EBk-cf-AFK" customClass="Main" customModule="Order_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7v2-0G-Quz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GQ0-6G-zx1">
+                                <rect key="frame" x="119" y="104" width="176" height="22.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22.5" id="HIU-nE-KJi"/>
+                                    <constraint firstAttribute="width" constant="175.90000000000001" id="RJ8-fX-E7K"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên người dùng" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r8D-XF-GED" customClass="TextField" customModule="Order_Restaurant" customModuleProvider="target">
+                                <rect key="frame" x="16" y="150" width="382" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Per-Id-BWT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="textField" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ad8-Oi-OeZ" customClass="TextField" customModule="Order_Restaurant" customModuleProvider="target">
+                                <rect key="frame" x="16" y="214" width="382" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="uSY-Sc-CTJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="textField" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n43-il-mfO" customClass="Button" customModule="Order_Restaurant" customModuleProvider="target">
+                                <rect key="frame" x="16" y="310" width="382" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.44705882349999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Dvr-rA-sfG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Đăng nhập">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="button" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginAccount:" destination="EBk-cf-AFK" eventType="touchUpInside" id="wYW-Fp-0PA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn đã có tài khoản chưa?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in2-2E-0qI">
+                                <rect key="frame" x="110" y="378" width="194.5" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kz1-ud-XxR" customClass="Button" customModule="Order_Restaurant" customModuleProvider="target">
+                                <rect key="frame" x="18" y="413" width="378" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="FvX-T1-eAR"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.44705882349999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Đăng ký">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="button" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerAccount:" destination="EBk-cf-AFK" eventType="touchUpInside" id="FQs-Vw-t5U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OUm-os-GCW"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.97255116699999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GQ0-6G-zx1" firstAttribute="top" secondItem="OUm-os-GCW" secondAttribute="top" constant="16" id="4Ot-6x-JnS"/>
+                            <constraint firstItem="n43-il-mfO" firstAttribute="leading" secondItem="OUm-os-GCW" secondAttribute="leading" constant="16" id="5Mf-gK-fpp"/>
+                            <constraint firstItem="OUm-os-GCW" firstAttribute="trailing" secondItem="ad8-Oi-OeZ" secondAttribute="trailing" constant="16" id="5bq-c1-9E2"/>
+                            <constraint firstItem="GQ0-6G-zx1" firstAttribute="centerX" secondItem="7v2-0G-Quz" secondAttribute="centerX" id="7vv-LG-UL3"/>
+                            <constraint firstItem="kz1-ud-XxR" firstAttribute="centerX" secondItem="7v2-0G-Quz" secondAttribute="centerX" id="8ft-cw-iM2"/>
+                            <constraint firstItem="n43-il-mfO" firstAttribute="top" secondItem="ad8-Oi-OeZ" secondAttribute="bottom" constant="48" id="L6R-9D-CUP"/>
+                            <constraint firstItem="n43-il-mfO" firstAttribute="centerX" secondItem="7v2-0G-Quz" secondAttribute="centerX" id="LIH-qu-MeI"/>
+                            <constraint firstItem="ad8-Oi-OeZ" firstAttribute="top" secondItem="r8D-XF-GED" secondAttribute="bottom" constant="16" id="X2a-Me-Q5f"/>
+                            <constraint firstItem="ad8-Oi-OeZ" firstAttribute="leading" secondItem="OUm-os-GCW" secondAttribute="leading" constant="16" id="XpZ-1C-hsW"/>
+                            <constraint firstItem="kz1-ud-XxR" firstAttribute="top" secondItem="in2-2E-0qI" secondAttribute="bottom" constant="16" id="Xve-KV-45S"/>
+                            <constraint firstItem="kz1-ud-XxR" firstAttribute="centerX" secondItem="7v2-0G-Quz" secondAttribute="centerX" id="ac7-Yi-lmW"/>
+                            <constraint firstItem="OUm-os-GCW" firstAttribute="trailing" secondItem="n43-il-mfO" secondAttribute="trailing" constant="16" id="ahc-gd-mG9"/>
+                            <constraint firstItem="in2-2E-0qI" firstAttribute="centerX" secondItem="7v2-0G-Quz" secondAttribute="centerX" id="bMj-Ry-C8U"/>
+                            <constraint firstItem="r8D-XF-GED" firstAttribute="leading" secondItem="OUm-os-GCW" secondAttribute="leading" constant="16" id="bv9-vd-BOy"/>
+                            <constraint firstItem="kz1-ud-XxR" firstAttribute="leading" secondItem="OUm-os-GCW" secondAttribute="leading" constant="18" id="dsi-46-Pks"/>
+                            <constraint firstItem="OUm-os-GCW" firstAttribute="trailing" secondItem="kz1-ud-XxR" secondAttribute="trailing" constant="18" id="q4H-cP-Z40"/>
+                            <constraint firstItem="OUm-os-GCW" firstAttribute="trailing" secondItem="r8D-XF-GED" secondAttribute="trailing" constant="16" id="qHd-Ck-Cu4"/>
+                            <constraint firstItem="r8D-XF-GED" firstAttribute="top" secondItem="7v2-0G-Quz" secondAttribute="top" constant="150" id="rRI-qQ-sQY"/>
+                            <constraint firstItem="in2-2E-0qI" firstAttribute="top" secondItem="n43-il-mfO" secondAttribute="bottom" constant="20" id="wNJ-my-hZg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ItK-X2-jlz"/>
+                    <connections>
+                        <outlet property="password" destination="ad8-Oi-OeZ" id="P9G-Mb-SWw"/>
+                        <outlet property="userName" destination="r8D-XF-GED" id="GlA-sq-ABU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUs-rJ-fY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="46"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="ad8-Oi-OeZ">
+            <size key="intrinsicContentSize" width="98.5" height="34"/>
+        </designable>
+        <designable name="kz1-ud-XxR">
+            <size key="intrinsicContentSize" width="87" height="34.5"/>
+        </designable>
+        <designable name="n43-il-mfO">
+            <size key="intrinsicContentSize" width="84" height="33"/>
+        </designable>
+        <designable name="r8D-XF-GED">
+            <size key="intrinsicContentSize" width="146.5" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="logo" width="177" height="23"/>
+    </resources>
+</document>

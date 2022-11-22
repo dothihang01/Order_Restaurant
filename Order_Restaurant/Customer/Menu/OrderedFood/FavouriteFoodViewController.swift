@@ -1,13 +1,13 @@
 //
-//  OrderedFoodViewController.swift
+//  FavouriteFoodViewController.swift
 //  Order_Restaurant
 //
-//  Created by Nguyen Hung on 18/10/2022.
+//  Created by Nguyen Hung on 22/11/2022.
 //
 
 import UIKit
 
-class OrderedFoodViewController: UIViewController {
+class FavouriteFoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

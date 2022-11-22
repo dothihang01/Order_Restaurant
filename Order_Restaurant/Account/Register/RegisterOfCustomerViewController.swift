@@ -7,23 +7,93 @@
 
 import UIKit
 
+protocol AddAccountDelegate {
+    func addAcc(register: Account)
+}
+
 class RegisterOfCustomerViewController: UIViewController {
 
+    @IBOutlet weak var inputNameRegister: TextField!
+    @IBOutlet weak var imgQRcode: UIImageView!
+    @IBOutlet weak var inputPasswordRegister: TextField!
+    var delegate: AddAccountDelegate?
+    
+    var listRegister: [Account] = []
+    var getAccount: Account?
+    var isSelectedCustomer = false
+    var isSelectedRestaurant = false
+    var filter: CIFilter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        hideKeyboardWhenTappedAround()
+//        print(listRegister)
     }
+    
+    @IBAction func btnRegister(_ sender: UIButton) {
+        
+        let name = inputNameRegister.text ?? ""
+        let password = inputPasswordRegister.text ?? ""
+        
+        let data = name.data(using: .ascii, allowLossyConversion: false)
+        filter = CIFilter(name: "CIQRCodeGenerator")
+        filter.setValue(data, forKey: "inputMessage")
+        let img = UIImage(ciImage: filter.outputImage!)
+            imgQRcode.image = img
 
+        if isSelectedCustomer == true {
+//            getAccount?.typeAccount = 0
+            getAccount?.accountName = name
+            getAccount?.password = password
+            getAccount = Account(accountId: 4, accountName: name, password: password, typeAccount: 0)
+            displayMyAlertMessage(userMessage:"Đăng ký thành công")
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
+        
+        else if isSelectedRestaurant == true {
+//            getAccount?.typeAccount = 1
+            getAccount?.accountName =  name
+            getAccount?.password =  password
+            getAccount = Account(accountId: 4, accountName: name, password: password, typeAccount: 1)
+            displayMyAlertMessage(userMessage:"Đăng ký thành công")
+        }
+            delegate?.addAcc(register: getAccount!)
+            self.navigationController?.popViewController(animated: true)
+        
+        }
+    
+    @IBAction func chooseRestaurant(_ sender: UIButton) {
+        if isSelectedRestaurant == false {
+            sender.setImage(UIImage(named: "icMultiselect"), for: .normal)
+//            sender.setImage(UIImage(named: "isSelect"), for: .normal)
+            isSelectedRestaurant = true
+            isSelectedCustomer = false
+        }
     }
-    */
+    @IBAction func chooseCustomer(_ sender: UIButton) {
+        if isSelectedCustomer == false {
+            sender.setImage(UIImage(named: "icMultiselect"), for: .normal)
+            isSelectedCustomer = true
+            isSelectedRestaurant = false
+        }
+    }
+    
+    func displayMyAlertMessage(userMessage:String){
+        let myAlert = UIAlertController(title: "Thông báo", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+    }
+}
 
+extension RegisterOfCustomerViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(RegisterOfCustomerViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

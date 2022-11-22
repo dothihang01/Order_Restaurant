@@ -26,12 +26,15 @@ class FavouriteViewController: UIViewController {
 extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return FoodInRestaurant.listFavouriteRes.count
 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customFavouriteCollectionViewCell", for: indexPath) as! CustomFavouriteCollectionViewCell
+        cell.imgRes.image = UIImage(named: "\(FoodInRestaurant.listFavouriteRes[indexPath.row].restaurantImage)")
+        cell.nameRes.text = FoodInRestaurant.listFavouriteRes[indexPath.row].restaurantName
+        cell.addressRes.text = FoodInRestaurant.listFavouriteRes[indexPath.row].restaurantAddress
         cell.layer.cornerRadius = 6
         return cell
     }
@@ -43,6 +46,7 @@ extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: favouriteCollectionView.bounds.width, height: 80)
     }
+    
     
     
 }

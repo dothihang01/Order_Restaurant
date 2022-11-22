@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="303" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 22" translatesAutoresizingMaskIntoConstraints="NO" id="3Hh-5z-Nfw">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 22" translatesAutoresizingMaskIntoConstraints="NO" id="3Hh-5z-Nfw">
                         <rect key="frame" x="10" y="10" width="283" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="2ax-IX-SbH"/>
@@ -81,21 +81,40 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVy-e0-bcT">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="OtL-tk-EP9"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="goToDetaiRes:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aPU-Va-KUW"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="3Hh-5z-Nfw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="EHp-Fe-BYo"/>
+                <constraint firstAttribute="bottom" secondItem="vVy-e0-bcT" secondAttribute="bottom" id="EIf-bK-uvf"/>
                 <constraint firstItem="3Hh-5z-Nfw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="L9u-th-EOf"/>
+                <constraint firstItem="vVy-e0-bcT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="M2D-hA-xck"/>
                 <constraint firstAttribute="bottom" secondItem="tih-on-CYX" secondAttribute="bottom" constant="10" id="MJo-k2-rth"/>
                 <constraint firstItem="tih-on-CYX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="VMt-zW-jqJ"/>
                 <constraint firstAttribute="trailing" secondItem="tih-on-CYX" secondAttribute="trailing" constant="20" id="b9g-D9-V2d"/>
                 <constraint firstAttribute="trailing" secondItem="3Hh-5z-Nfw" secondAttribute="trailing" constant="10" id="jcY-bT-Xat"/>
                 <constraint firstItem="tih-on-CYX" firstAttribute="top" secondItem="3Hh-5z-Nfw" secondAttribute="bottom" constant="10" id="kbf-QJ-DTw"/>
+                <constraint firstItem="vVy-e0-bcT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kmd-6l-fdM"/>
             </constraints>
             <size key="customSize" width="303" height="177"/>
-            <point key="canvasLocation" x="236.95652173913047" y="140.95982142857142"/>
+            <connections>
+                <outlet property="imgLogoRes" destination="gJL-zJ-u2t" id="H5S-aL-T31"/>
+                <outlet property="imgResOutstanding" destination="3Hh-5z-Nfw" id="Zmq-yl-FtN"/>
+                <outlet property="nameRes" destination="6yf-FO-fQG" id="pkd-CM-93q"/>
+                <outlet property="txtDescripRes" destination="mWi-KF-3tA" id="Y4V-3f-xmm"/>
+            </connections>
+            <point key="canvasLocation" x="236.95652173913047" y="140.625"/>
         </collectionViewCell>
     </objects>
     <resources>

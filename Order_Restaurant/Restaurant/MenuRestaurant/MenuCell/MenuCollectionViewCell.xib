@@ -11,93 +11,119 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MenuCollectionViewCell" customModule="Order_Restaurant" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
-        </collectionViewCell>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dvN-H5-hJi" customClass="CustomMenuCollectionViewCell" customModule="Order_Restaurant" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dvN-H5-hJi" customClass="MenuCollectionViewCell" customModule="Order_Restaurant" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="330" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="330" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 24-1" translatesAutoresizingMaskIntoConstraints="NO" id="jRy-BE-Odg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 21-2" translatesAutoresizingMaskIntoConstraints="NO" id="jRy-BE-Odg">
                         <rect key="frame" x="10" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="4mJ-pF-TdC"/>
+                            <constraint firstAttribute="width" constant="80" id="u8T-eS-X1e"/>
+                        </constraints>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-P0-rDk">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-P0-rDk">
                         <rect key="frame" x="100" y="10" width="220" height="80"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5en-7a-RT5">
-                                <rect key="frame" x="0.0" y="0.0" width="76" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5en-7a-RT5">
+                                <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gà" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMa-fn-E7v">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJ3-fL-cky">
-                                        <rect key="frame" x="0.0" y="20" width="76" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Gà rán  - Ớt">
-                                            <color key="titleColor" systemColor="secondaryLabelColor"/>
-                                        </state>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gà rán - ớt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-Gq-VT1">
+                                        <rect key="frame" x="0.0" y="24.5" width="105" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-l0-HTX">
-                                        <rect key="frame" x="0.0" y="40" width="76" height="20"/>
+                                        <rect key="frame" x="0.0" y="45.5" width="105" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzO-So-DZz">
-                                        <rect key="frame" x="0.0" y="60" width="76" height="20"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="105" height="17.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGray2Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q4k-hh-hwc">
-                                <rect key="frame" x="139" y="0.0" width="81" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ5-C4-czd">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Chỉnh sửa" image="Note">
-                                            <color key="titleColor" systemColor="secondaryLabelColor"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J9-9x-Nna">
-                                        <rect key="frame" x="0.0" y="40" width="81" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="tintColor" systemColor="systemGray2Color"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="10 phút" image="clock.fill" catalog="system">
-                                            <color key="titleColor" systemColor="systemGray2Color"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="oNE-fX-WTV">
+                                <rect key="frame" x="115" y="0.0" width="20" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="8kM-CV-6Uk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 phút" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-gT-Mct">
+                                <rect key="frame" x="145" y="0.0" width="75" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.60392156860000001" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81m-BY-0x3">
-                        <rect key="frame" x="304" y="10" width="16" height="16"/>
+                        <rect key="frame" x="304" y="0.0" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="2if-e4-Rse"/>
                             <constraint firstAttribute="height" constant="16" id="Lvs-vx-SDz"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="Delete"/>
+                        <connections>
+                            <action selector="deleteFoodRes:" destination="dvN-H5-hJi" eventType="touchUpInside" id="eXr-Hr-nLw"/>
+                        </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ5-C4-czd">
+                        <rect key="frame" x="218" y="10" width="81" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Chỉnh sửa" image="Note">
+                            <color key="titleColor" systemColor="secondaryLabelColor"/>
+                        </state>
+                        <connections>
+                            <action selector="editFoodRestaurant:" destination="dvN-H5-hJi" eventType="touchUpInside" id="edv-BQ-GUt"/>
+                        </connections>
+                    </button>
+                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ICX-r8-83D">
+                        <rect key="frame" x="220" y="68" width="100" height="22"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wz-vg-Zqt">
+                                <rect key="frame" x="0.0" y="0.0" width="33.5" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="-"/>
+                                <connections>
+                                    <action selector="addFoodOrder:" destination="dvN-H5-hJi" eventType="touchUpInside" id="SBg-ma-sNw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT8-DH-6G8">
+                                <rect key="frame" x="33.5" y="0.0" width="33" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Equ-Vx-nwF">
+                                <rect key="frame" x="66.5" y="0.0" width="33.5" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="+"/>
+                                <connections>
+                                    <action selector="deleteFoodOrder:" destination="dvN-H5-hJi" eventType="touchUpInside" id="gcd-85-kwU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Xse-ZL-4k9"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="JRb-a5-jbB"/>
@@ -106,22 +132,40 @@
                 <constraint firstItem="tLf-P0-rDk" firstAttribute="leading" secondItem="jRy-BE-Odg" secondAttribute="trailing" constant="10" id="3L6-Zl-Yx4"/>
                 <constraint firstAttribute="bottom" secondItem="tLf-P0-rDk" secondAttribute="bottom" constant="10" id="6zT-wV-mK4"/>
                 <constraint firstAttribute="bottom" secondItem="jRy-BE-Odg" secondAttribute="bottom" constant="10" id="7Ue-Db-phj"/>
-                <constraint firstItem="81m-BY-0x3" firstAttribute="top" secondItem="dvN-H5-hJi" secondAttribute="top" constant="10" id="PGQ-Wr-nvV"/>
+                <constraint firstItem="81m-BY-0x3" firstAttribute="top" secondItem="dvN-H5-hJi" secondAttribute="top" id="PGQ-Wr-nvV"/>
                 <constraint firstItem="jRy-BE-Odg" firstAttribute="top" secondItem="dvN-H5-hJi" secondAttribute="top" constant="10" id="QmR-W9-Bfv"/>
+                <constraint firstAttribute="bottom" secondItem="ICX-r8-83D" secondAttribute="bottom" constant="10" id="ZI4-FO-Umc"/>
                 <constraint firstItem="tLf-P0-rDk" firstAttribute="top" secondItem="dvN-H5-hJi" secondAttribute="top" constant="10" id="Zuw-PS-B1G"/>
                 <constraint firstItem="jRy-BE-Odg" firstAttribute="leading" secondItem="dvN-H5-hJi" secondAttribute="leading" constant="10" id="ftj-Za-xJm"/>
+                <constraint firstItem="GJ5-C4-czd" firstAttribute="top" secondItem="dvN-H5-hJi" secondAttribute="top" constant="10" id="nyh-0v-uRC"/>
+                <constraint firstItem="81m-BY-0x3" firstAttribute="leading" secondItem="GJ5-C4-czd" secondAttribute="trailing" constant="5" id="vJ1-Hc-fyR"/>
+                <constraint firstAttribute="trailing" secondItem="ICX-r8-83D" secondAttribute="trailing" constant="10" id="w34-5G-sXW"/>
                 <constraint firstAttribute="trailing" secondItem="81m-BY-0x3" secondAttribute="trailing" constant="10" id="xmn-Ih-x85"/>
                 <constraint firstAttribute="trailing" secondItem="tLf-P0-rDk" secondAttribute="trailing" constant="10" id="zZr-3Q-rhs"/>
             </constraints>
             <size key="customSize" width="330" height="100"/>
-            <point key="canvasLocation" x="339" y="18"/>
+            <connections>
+                <outlet property="btnClose" destination="81m-BY-0x3" id="saD-aZ-RuW"/>
+                <outlet property="btnEdit" destination="GJ5-C4-czd" id="rVW-Ar-d4j"/>
+                <outlet property="descripFood" destination="MJR-Gq-VT1" id="DmR-Ls-rwA"/>
+                <outlet property="elementChooseQuality" destination="ICX-r8-83D" id="tFK-L9-Nb9"/>
+                <outlet property="imgFoodRes" destination="jRy-BE-Odg" id="H2H-7k-tcA"/>
+                <outlet property="nameFood" destination="dMa-fn-E7v" id="lOR-Am-jsr"/>
+                <outlet property="priceFood" destination="zgl-l0-HTX" id="P8k-vY-UEk"/>
+                <outlet property="qualityFood" destination="nzO-So-DZz" id="Xsj-O8-PTW"/>
+                <outlet property="timeFood" destination="t7d-gT-Mct" id="4hQ-sV-PT2"/>
+                <outlet property="txtQualityFood" destination="TT8-DH-6G8" id="5xF-ru-dSb"/>
+            </connections>
+            <point key="canvasLocation" x="337.68115942028987" y="17.410714285714285"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="+" width="16" height="16"/>
+        <image name="-" width="16" height="16"/>
+        <image name="Clock" width="16" height="16"/>
         <image name="Delete" width="16" height="16"/>
         <image name="Note" width="16" height="16"/>
-        <image name="Rectangle 24-1" width="80" height="80"/>
-        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="Rectangle 21-2" width="44.5" height="33.5"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuRestaurantViewController" customModule="Order_Restaurant" customModuleProvider="target">
             <connections>
+                <outlet property="listFoodCollectionView" destination="Klx-O9-G0Y" id="wDw-Fu-ey6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,7 +49,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-O9-G0Y">
-                    <rect key="frame" x="0.0" y="100" width="414" height="362"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="669"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CTf-Cy-hLa">
                         <size key="itemSize" width="128" height="128"/>
@@ -58,7 +59,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKX-dj-pmR">
-                    <rect key="frame" x="16" y="472" width="114" height="33"/>
+                    <rect key="frame" x="16" y="779" width="114" height="33"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="33" id="yTa-su-sZ7"/>
                     </constraints>
@@ -67,6 +68,9 @@
                     <state key="normal" title="Thêm món" image="+">
                         <color key="titleColor" systemColor="systemGray2Color"/>
                     </state>
+                    <connections>
+                        <action selector="addFood:" destination="-1" eventType="touchUpInside" id="975-VQ-jV7"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -77,7 +81,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QkY-Su-DkI" secondAttribute="trailing" id="MVf-LX-AK4"/>
                 <constraint firstItem="Klx-O9-G0Y" firstAttribute="top" secondItem="QkY-Su-DkI" secondAttribute="bottom" id="NPQ-eW-ggr"/>
                 <constraint firstItem="QkY-Su-DkI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="aR5-TE-HdA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Klx-O9-G0Y" secondAttribute="bottom" constant="400" id="nfJ-EZ-r6i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WKX-dj-pmR" secondAttribute="bottom" constant="50" id="dBi-gf-bhX"/>
                 <constraint firstItem="QkY-Su-DkI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="q4Y-2K-hs6"/>
                 <constraint firstItem="Klx-O9-G0Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vfr-Dl-g1L"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Klx-O9-G0Y" secondAttribute="trailing" id="wG5-c7-qQi"/>

@@ -9,9 +9,9 @@ import UIKit
 
 class HeaderMenuCell: UICollectionViewCell {
 
+    @IBOutlet weak var nameCategory: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

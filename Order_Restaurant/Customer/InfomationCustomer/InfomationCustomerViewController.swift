@@ -15,7 +15,11 @@ class InfomationCustomerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func goToEdit(_ sender: Any) {
+        let vc = EditInfomationCustomerViewController(nibName: "EditInfomationCustomerViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

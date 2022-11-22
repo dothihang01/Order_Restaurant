@@ -34,7 +34,10 @@
                 <constraint firstItem="D6E-M1-hoW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yQc-J2-xCX"/>
                 <constraint firstItem="D6E-M1-hoW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yiW-LE-3tE"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="80"/>
+            <connections>
+                <outlet property="nameCategory" destination="D6E-M1-hoW" id="S7A-fx-p6b"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </collectionViewCell>
     </objects>
     <resources>

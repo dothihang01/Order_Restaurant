@@ -9,6 +9,9 @@ import UIKit
 
 class CustomFavouriteCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var addressRes: UILabel!
+    @IBOutlet weak var nameRes: UILabel!
+    @IBOutlet weak var imgRes: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

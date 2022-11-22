@@ -54,6 +54,8 @@
             <size key="customSize" width="92" height="85"/>
             <connections>
                 <outlet property="imageRestaurant" destination="qb6-N4-dNg" id="woA-7s-0og"/>
+                <outlet property="lblDesc" destination="cGH-pg-sua" id="u9N-kn-pkZ"/>
+                <outlet property="lblNameRestaurant" destination="Yg9-X3-zfz" id="Nxz-bx-Yhc"/>
             </connections>
             <point key="canvasLocation" x="213" y="16"/>
         </collectionViewCell>

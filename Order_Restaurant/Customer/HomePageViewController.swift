@@ -13,6 +13,13 @@ class HomePageViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var orderMenuCollectionView: UICollectionView!
     @IBOutlet weak var roundCollectionView: UICollectionView!
     var arrImageRestaurant = [UIImage(named: "Rectangle 21-1"), UIImage(named: "Rectangle 21-2"), UIImage(named: "Rectangle 21")]
+    
+    var listCustomer: [Customer] = []
+    var listRestaurant: [Restaurant] = []
+    var listRestarantVisted: [Restaurant] = []
+    var listRecent: [Restaurant] = []
+//    var aRestaurant: Restaurant?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         orderMenuCollectionView.dataSource = self
@@ -21,6 +28,28 @@ class HomePageViewController: UIViewController, UITabBarControllerDelegate {
         roundCollectionView.delegate = self
         self.orderMenuCollectionView.register(UINib(nibName: "CustomVisitedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCollectionViewCell")
         self.roundCollectionView.register(UINib(nibName: "RoundCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "roundCollectionView")
+        createDataRes()
+    }
+    
+    func createDataRes() {
+        listRestaurant.append(Restaurant(restaurantId: 0, restaurantName: "Highland", restaurantAddress: "262, Nguyễn Trãi", restaurantDescription: "coffee - tea", restaurantImage: "combo - 1", numberOfVisit: 3, typeAccount: 0, logoRes: "highland", location: 3, food: FoodInRestaurant.listFoodRes))
+        listRestaurant.append(Restaurant(restaurantId: 1, restaurantName: "McDonald's", restaurantAddress: "262, Vũ Trọng Phụng", restaurantDescription: "burger - chicken", restaurantImage: "combo - 2", numberOfVisit: 5, typeAccount: 0, logoRes: "McDonald", location: 8, food: FoodInRestaurant.listFoodRes))
+        listRestaurant.append(Restaurant(restaurantId: 2, restaurantName: "KFC", restaurantAddress: "34, Nguyễn Trãi", restaurantDescription: "fast - food", restaurantImage: "kfc", numberOfVisit: 7, typeAccount: 0, logoRes: "Lotteria", location: 10, food: FoodInRestaurant.listFoodRes))
+        listRestaurant.append(Restaurant(restaurantId: 3, restaurantName: "Lotteria", restaurantAddress: "34, Nguyễn Trãi", restaurantDescription: "fast - food", restaurantImage: "shushi", numberOfVisit: 7, typeAccount: 0, logoRes: "Lotteria", location: 3, food: FoodInRestaurant.listFoodRes))
+        
+        for restaurant in listRestaurant {
+            if restaurant.numberOfVisit > 4 {
+                listRestarantVisted.append(restaurant)
+            }
+            if restaurant.location < 10 {
+                listRecent.append(restaurant)
+            }
+        }
+    }
+    
+    func createDateCustomer() {
+        listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Thị Hoa", customerDob: "10/02/2000", customerGender: "Nữ"))
+        listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Văn Nam", customerDob: "10/09/2000", customerGender: "Nam"))
     }
 }
 
@@ -28,19 +57,27 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.roundCollectionView {
-            return 10
+            return listRestarantVisted.count
         }
-        return arrImageRestaurant.count
+        return listRecent.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.roundCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "roundCollectionView", for: indexPath) as! RoundCollectionViewCell
+            cell.imgResOutstanding.image = UIImage(named: "\(listRestarantVisted[indexPath.row].restaurantImage)")
+            cell.imgLogoRes.image = UIImage(named: "\(listRestarantVisted[indexPath.row].logoRes)")
+            cell.nameRes.text = listRestarantVisted[indexPath.row].restaurantName
+            cell.txtDescripRes.text = listRestarantVisted[indexPath.row].restaurantDescription
+            cell.delegate = self
             cell.layer.cornerRadius = 10
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCollectionViewCell", for: indexPath) as! CustomVisitedCollectionViewCell
-            cell.layer.cornerRadius = 10
+                cell.lblNameRestaurant.text = listRecent[indexPath.row].restaurantName
+                cell.imageRestaurant.image = UIImage(named: "\(listRecent[indexPath.row].restaurantImage)")
+                cell.lblDesc.text = listRecent[indexPath.row].restaurantDescription
+                cell.layer.cornerRadius = 10
             return cell
         }
     }
@@ -67,6 +104,27 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
             yourHeight = yourWidth / 2
         }
         return CGSize(width: yourWidth, height: yourHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = OrderFoodViewController(nibName: "OrderFoodViewController", bundle: nil)
+//        vc.listRes = listRestaurant
+        if collectionView == self.roundCollectionView {
+            vc.aRes = listRestarantVisted[indexPath.row]
+        }
+        else {
+            vc.aRes = self.listRecent[indexPath.row]
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+}
+
+extension HomePageViewController: GoToDetailResDelegate {
+    func goToDetaiRes() {
+        let vc = OrderFoodViewController(nibName: "OrderFoodViewController", bundle: nil)
+        vc.listRes = listRestaurant
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

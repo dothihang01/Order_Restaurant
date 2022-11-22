@@ -64,7 +64,9 @@
             </constraints>
             <size key="customSize" width="92" height="85"/>
             <connections>
-                <outlet property="imageRestaurant" destination="a5G-P3-KYF" id="9NA-up-G0u"/>
+                <outlet property="imgFoodCus" destination="a5G-P3-KYF" id="Pgs-CL-gJ7"/>
+                <outlet property="nameFoodCus" destination="a8X-Tp-CZ1" id="yHJ-qm-BFv"/>
+                <outlet property="priceFoodCus" destination="ift-L7-fOj" id="Ndd-Rt-9By"/>
             </connections>
             <point key="canvasLocation" x="244.92753623188409" y="41.517857142857139"/>
         </collectionViewCell>
