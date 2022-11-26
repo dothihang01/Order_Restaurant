@@ -11,6 +11,7 @@ class MenuRestaurantViewController: UIViewController {
 
     @IBOutlet weak var listFoodCollectionView: UICollectionView!
     var listShowFood: [Food] = []
+    var listFoodOrder: [Food] = []
     var listShowCategory: [Category] = []
     var addAFood: Food?
     var index: Int?
@@ -22,6 +23,7 @@ class MenuRestaurantViewController: UIViewController {
         self.listFoodCollectionView.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "menuCollectionViewCell")
         listFoodCollectionView.register(UINib(nibName: "HeaderCategoryViewController", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerCategoryViewController")
         createData()
+        createDataFoodOrder()
     }
     
     func createData() {
@@ -29,11 +31,19 @@ class MenuRestaurantViewController: UIViewController {
         listShowCategory.append(Category(categoryId: 1, categoryName: "Mì"))
         listShowCategory.append(Category(categoryId: 2, categoryName: "Nước"))
         
-        listShowFood.append(Food(foodId: 0, foodName: "Gà", foodPrice: "24.000", foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: "30", foodTime: "10", foodCategory: "Gà", numberOfOrder: 1))
-        listShowFood.append(Food(foodId: 0, foodName: "Gà", foodPrice: "24.000", foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: "30", foodTime: "10", foodCategory: "Gà", numberOfOrder: 9))
-        listShowFood.append(Food(foodId: 0, foodName: "Pizza - Hải sản", foodPrice: "64.000", foodDescription: "Topping: Cua, ghẹ, tôm,...", foodImage: "Pizza", foodAmount: "10", foodTime: "20", foodCategory: "Pizza", numberOfOrder: 7))
-        listShowFood.append(Food(foodId: 0, foodName: "Burger - King", foodPrice: "35.000", foodDescription: "Burger kẹp thịt bò, rau củ, đẫm sốt", foodImage: "Burger", foodAmount: "20", foodTime: "10", foodCategory: "Burger", numberOfOrder: 8))
+        listShowFood.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 0))
+        listShowFood.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 0))
+        listShowFood.append(Food(foodId: 0, foodName: "Pizza - Hải sản", foodPrice: 64000, foodDescription: "Topping: Cua, ghẹ, tôm,...", foodImage: "Pizza", foodAmount: 10, foodTime: "20", foodCategory: "Pizza", numberOfOrder: 0))
+        listShowFood.append(Food(foodId: 0, foodName: "Burger - King", foodPrice: 35000, foodDescription: "Burger kẹp thịt bò, rau củ, đẫm sốt", foodImage: "Burger", foodAmount: 20, foodTime: "10", foodCategory: "Burger", numberOfOrder: 0))
         FoodInRestaurant.listFoodRes = listShowFood
+    }
+    
+    func createDataFoodOrder() {
+        listFoodOrder.append(Food(foodId: 0, foodName: "Pizza - Hải sản", foodPrice: 64000, foodDescription: "Topping: Cua, ghẹ, tôm,...", foodImage: "Pizza", foodAmount: 10, foodTime: "20", foodCategory: "Pizza", numberOfOrder: 7))
+        listFoodOrder.append(Food(foodId: 0, foodName: "Burger - King", foodPrice: 35000, foodDescription: "Burger kẹp thịt bò, rau củ, đẫm sốt", foodImage: "Burger", foodAmount: 20, foodTime: "10", foodCategory: "Burger", numberOfOrder: 0))
+        listFoodOrder.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 9))
+        listFoodOrder.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 10))
+        FoodInRestaurant.listFoodOrder = self.listFoodOrder
     }
 
     @IBAction func addFood(_ sender: Any) {
@@ -67,7 +77,7 @@ extension MenuRestaurantViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCollectionViewCell", for: indexPath) as! MenuCollectionViewCell
         cell.nameFood.text = listShowFood[indexPath.row].foodName
         cell.descripFood.text = listShowFood[indexPath.row].foodDescription
-        cell.priceFood.text = listShowFood[indexPath.row].foodPrice
+        cell.priceFood.text = "Giá: \(listShowFood[indexPath.row].foodPrice)"
         cell.imgFoodRes.image = UIImage(named: "\(listShowFood[indexPath.row].foodImage)")
         index = indexPath.row
         cell.indexPath = index
@@ -93,20 +103,20 @@ extension MenuRestaurantViewController: UICollectionViewDelegate, UICollectionVi
 }
 
 extension MenuRestaurantViewController: ActionEditFoodResDelegate {
-    func deleteFoodRes(food: Food, index: Int) {
+    func deleteFoodRes(food: Food?, index: Int) {
         listShowFood.remove(at: index)
         FoodInRestaurant.listFoodRes = listShowFood
         self.listFoodCollectionView.reloadData()
     }
     
-    func editFoodRestaurant(food: Food) {
+    func editFoodRestaurant(food: Food?) {
         let vc = PopUpAddMenuViewController(nibName: "PopUpAddMenuViewController", bundle: nil)
-        vc.category = food.foodCategory
-        vc.price = food.foodPrice
-        vc.name = food.foodName
-        vc.time = food.foodTime
-        vc.quality = food.foodAmount
-        vc.descrip = food.foodDescription
+        vc.category = food?.foodCategory ?? ""
+        vc.price = food?.foodPrice ?? 0
+        vc.name = food?.foodName ?? ""
+        vc.time = food?.foodTime ?? ""
+        vc.quality = "\(food?.foodAmount ?? 0)"
+        vc.descrip = food?.foodDescription ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

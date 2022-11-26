@@ -9,5 +9,6 @@ import Foundation
 
 struct FoodInRestaurant {
     static var listFoodRes: [Food] = []
+    static var listFoodOrder: [Food] = []
     static var listFavouriteRes: [Restaurant] = []
 }

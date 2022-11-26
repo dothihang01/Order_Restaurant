@@ -21,14 +21,14 @@ class Category {
 class Food {
     var foodId: Int
     var foodName: String
-    var foodPrice: String
+    var foodPrice: Int
     var foodDescription: String
     var foodImage: String
-    var foodAmount: String
+    var foodAmount: Int = 0
     var foodTime: String
     var foodCategory: String
-    var numberOfOrder: Int
-    init(foodId: Int, foodName: String, foodPrice: String, foodDescription: String, foodImage: String, foodAmount: String, foodTime: String, foodCategory: String, numberOfOrder: Int) {
+    var numberOfOrder: Int = 0
+    init(foodId: Int, foodName: String, foodPrice: Int, foodDescription: String, foodImage: String, foodAmount: Int, foodTime: String, foodCategory: String, numberOfOrder: Int) {
         self.foodId = foodId
         self.foodName = foodName
         self.foodPrice = foodPrice
@@ -41,17 +41,26 @@ class Food {
     }
 }
 
+class Table {
+    var numberTable: Int
+    init(numberTable: Int) {
+        self.numberTable = numberTable
+    }
+}
+
 class Order {
     var orderId: Int
     var orderTable: Int
     var orderTotalPrice: Double
     var orderDate: Double
+    var table: Table?
     
-    init(orderId: Int, orderTable: Int, orderTotalPrice: Double, orderDate: Double) {
+    init(orderId: Int, orderTable: Int, orderTotalPrice: Double, orderDate: Double, table: Table?) {
         self.orderId = orderId
         self.orderTable = orderTable
         self.orderTotalPrice = orderTotalPrice
         self.orderDate = orderDate
+        self.table = table
     }
 }
 
@@ -79,7 +88,8 @@ class Restaurant {
     var typeAccount: Int
     var location: Int
     var food: [Food]
-    init(restaurantId: Int, restaurantName: String, restaurantAddress: String, restaurantDescription: String, restaurantImage: String, numberOfVisit: Int, typeAccount: Int, logoRes: String, location: Int, food: [Food]) {
+    var table: [Table]
+    init(restaurantId: Int, restaurantName: String, restaurantAddress: String, restaurantDescription: String, restaurantImage: String, numberOfVisit: Int, typeAccount: Int, logoRes: String, location: Int, food: [Food], table: [Table]) {
         self.restaurantId = restaurantId
         self.restaurantName = restaurantName
         self.restaurantAddress = restaurantAddress
@@ -90,6 +100,7 @@ class Restaurant {
         self.logoRes = logoRes
         self.location = location
         self.food = food
+        self.table = table
     }
 }
 
@@ -102,8 +113,6 @@ class Bill {
         self.billStatus = billStatus
     }
 }
-
-
 
 class Account {
     var accountId: Int

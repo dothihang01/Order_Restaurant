@@ -62,7 +62,7 @@ class RegisterOfCustomerViewController: UIViewController {
         
         }
     
-    @IBAction func chooseRestaurant(_ sender: UIButton) {
+    @IBAction func choose(_ sender: UIButton) {
         if isSelectedRestaurant == false {
             sender.setImage(UIImage(named: "icMultiselect"), for: .normal)
 //            sender.setImage(UIImage(named: "isSelect"), for: .normal)

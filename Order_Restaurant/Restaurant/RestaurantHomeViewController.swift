@@ -11,6 +11,7 @@ class RestaurantHomeViewController: UIViewController {
     
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var imgQr: UIImageView!
     @IBOutlet weak var lblAddress: UILabel!
     var listRestaurant: [Restaurant] = []
     
@@ -39,8 +40,8 @@ class RestaurantHomeViewController: UIViewController {
     }
     
     func createDataRestaurant() {
-        listRestaurant.append(Restaurant(restaurantId: 0, restaurantName: "Mc Donald", restaurantAddress: "Nguyễn Trãi, Thanh Xuân", restaurantDescription: "Gà rán - CocaCola", restaurantImage: "McDonald", numberOfVisit: 0, typeAccount: 0, logoRes: "McDonald", location: 5, food: FoodInRestaurant.listFoodRes))
-        listRestaurant.append(Restaurant(restaurantId: 1, restaurantName: "Lotteria", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, typeAccount: 0, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes))
+        listRestaurant.append(Restaurant(restaurantId: 0, restaurantName: "Mc Donald", restaurantAddress: "Nguyễn Trãi, Thanh Xuân", restaurantDescription: "Gà rán - CocaCola", restaurantImage: "McDonald", numberOfVisit: 0, typeAccount: 0, logoRes: "McDonald", location: 5, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 10)]))
+        listRestaurant.append(Restaurant(restaurantId: 1, restaurantName: "Lotteria", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, typeAccount: 0, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)]))
     }
     
     @IBAction func goToMenuRestaurant(_ sender: Any) {

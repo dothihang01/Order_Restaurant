@@ -24,7 +24,7 @@ class PopUpAddMenuViewController: UIViewController {
     var newCategory: Category?
     var delegate: AddFoodDelegate?
     var category = ""
-    var price = ""
+    var price = 0
     var name = ""
     var time = ""
     var quality = ""
@@ -33,7 +33,7 @@ class PopUpAddMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtCategory.text = category
-        txtPrice.text = price
+        txtPrice.text = "\(price)"
         txtNameFood.text = name
         txtTime.text = time
         txtQuality.text = quality
@@ -43,7 +43,7 @@ class PopUpAddMenuViewController: UIViewController {
     
     @IBAction func addFood(_ sender: Any) {
 
-        newFood = Food(foodId: 0, foodName: txtNameFood.text ?? "", foodPrice: txtPrice.text ?? "", foodDescription: txtDescription.text ?? "", foodImage: "", foodAmount: txtQuality.text ?? "", foodTime: txtTime.text ?? "", foodCategory: txtCategory.text ?? "", numberOfOrder: 4)
+        newFood = Food(foodId: 0, foodName: txtNameFood.text ?? "", foodPrice: Int(txtPrice.text ?? "") ?? 0, foodDescription: txtDescription.text ?? "", foodImage: "", foodAmount: Int(txtQuality.text ?? "") ?? 0, foodTime: txtTime.text ?? "", foodCategory: txtCategory.text ?? "", numberOfOrder: 4)
         
         newCategory = Category(categoryId: 0, categoryName: txtCategory.text ?? "")
         

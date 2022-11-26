@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantHomeViewController" customModule="Order_Restaurant" customModuleProvider="target">
             <connections>
+                <outlet property="imgQr" destination="bPy-9a-JdA" id="e20-Vw-8yN"/>
                 <outlet property="lblAddress" destination="3mn-Fe-ebp" id="fyy-Ya-HFP"/>
                 <outlet property="lblDesc" destination="Wwq-JY-1FU" id="so8-vi-6IA"/>
                 <outlet property="lblName" destination="vZH-0r-fLH" id="obU-rW-gDh"/>
@@ -172,6 +173,13 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPy-9a-JdA">
+                    <rect key="frame" x="95" y="427" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="QuC-Ve-q9l"/>
+                        <constraint firstAttribute="height" constant="200" id="ZuF-5x-8gm"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -182,6 +190,8 @@
                 <constraint firstItem="dEn-GP-R44" firstAttribute="top" secondItem="Gck-ZS-Wxp" secondAttribute="bottom" constant="40" id="7cZ-ra-wNY"/>
                 <constraint firstItem="Lkr-yC-1t9" firstAttribute="top" secondItem="dEn-GP-R44" secondAttribute="bottom" constant="30" id="Erd-sj-DS5"/>
                 <constraint firstItem="Lkr-yC-1t9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MxR-zN-PwM"/>
+                <constraint firstItem="bPy-9a-JdA" firstAttribute="top" secondItem="Lkr-yC-1t9" secondAttribute="bottom" constant="50" id="Q4C-x8-dup"/>
+                <constraint firstItem="bPy-9a-JdA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R9C-Ud-eh7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGk-hk-5ff" secondAttribute="trailing" constant="20" id="UkE-9h-tsx"/>
                 <constraint firstItem="Gck-ZS-Wxp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VKI-u2-dVA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkr-yC-1t9" secondAttribute="trailing" constant="16" id="nVo-fp-PzL"/>

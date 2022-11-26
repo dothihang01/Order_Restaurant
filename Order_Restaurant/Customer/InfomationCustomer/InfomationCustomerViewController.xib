@@ -28,8 +28,12 @@
                     <color key="textColor" red="1" green="0.44705882352941173" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 3" translatesAutoresizingMaskIntoConstraints="NO" id="hF7-yr-95I">
-                    <rect key="frame" x="145" y="139" width="100" height="100"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hF7-yr-95I">
+                    <rect key="frame" x="145" y="140" width="100" height="98.666666666666671"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="CFI-eU-SJZ"/>
+                        <constraint firstAttribute="width" constant="100" id="Taw-7m-8DH"/>
+                    </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bpS-Bf-jjr">
                     <rect key="frame" x="20" y="259" width="350" height="133"/>
@@ -90,7 +94,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Ellipse 3" width="100" height="100"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

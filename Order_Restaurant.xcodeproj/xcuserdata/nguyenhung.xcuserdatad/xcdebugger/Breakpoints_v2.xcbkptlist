@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "04F8F00C-A092-4F7A-A3E9-A0539F831668"
+            uuid = "FB08639B-F4CD-4516-BD07-3919C1691C12"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Restaurant/MenuRestaurant/HeaderMenuView/HeaderCategoryViewController.swift"
+            filePath = "Order_Restaurant/Restaurant/MenuRestaurant/MenuCell/MenuCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8CE23543-836D-47DF-B823-228C700BB521"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Restaurant/MenuRestaurant/HeaderMenuView/HeaderCategoryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "deleteFoodOrder(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

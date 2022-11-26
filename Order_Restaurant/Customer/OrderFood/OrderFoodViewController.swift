@@ -23,11 +23,14 @@ class OrderFoodViewController: UIViewController {
     var listRes: [Restaurant] = []
     var listFoodBestSaler: [Food] = []
     var aFood: Food?
+    var foodOrder: Food?
     var aRes: Restaurant?
     var listFoodOrder: [Food] = []
     var indexRow = 0
     var listFavourite: [Restaurant] = []
     var isCheck = false
+    var sumPrice = 0
+    var sumQuality = 0
     
     
     override func viewDidLoad() {
@@ -40,13 +43,13 @@ class OrderFoodViewController: UIViewController {
         self.btnTieptuc.layer.cornerRadius = 5
         
         self.nameResOrder.text = aRes?.restaurantName
-        self.imgDetailOrder.image = UIImage(named: "\(String(describing: aRes?.restaurantImage))")
+        self.imgDetailOrder.image = UIImage(named: "\( aRes?.restaurantImage ?? "")")
         self.desDetailOrder.text = aRes?.restaurantDescription
         self.foodBestCollectionView.register(UINib(nibName: "CustomBestSellerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         
         self.listFoodInResCollectionView.register(UINib(nibName: "MenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "menuCollectionViewCell")
         
-        for food in FoodInRestaurant.listFoodRes {
+        for food in FoodInRestaurant.listFoodOrder {
             if food.numberOfOrder > 5 {
                 listFoodBestSaler.append(food)
             }
@@ -55,6 +58,7 @@ class OrderFoodViewController: UIViewController {
     
     @IBAction func actionTieptuc(_ sender: Any) {
         let vc = YourMenuViewController(nibName: "YourMenuViewController", bundle: nil)
+        vc.listYourOrder = listFoodOrder
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -85,17 +89,19 @@ extension OrderFoodViewController: UICollectionViewDelegate, UICollectionViewDel
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomBestSellerCollectionViewCell
             cell.imgFoodCus.image = UIImage(named: "\(listFoodBestSaler[indexPath.row].foodImage)")
             cell.nameFoodCus.text = listFoodBestSaler[indexPath.row].foodName
-            cell.priceFoodCus.text = "\(listFoodBestSaler[indexPath.row].foodPrice) VND"
+            cell.priceFoodCus.text = "\(listFoodBestSaler[indexPath.row].foodPrice)"
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCollectionViewCell", for: indexPath) as! MenuCollectionViewCell
             cell.imgFoodRes.image = UIImage(named: "\(FoodInRestaurant.listFoodRes[indexPath.row].foodImage)")
+            cell.delegateAction = self
             cell.nameFood.text = FoodInRestaurant.listFoodRes[indexPath.row].foodName
             cell.descripFood.text = FoodInRestaurant.listFoodRes[indexPath.row].foodDescription
-            cell.priceFood.text = FoodInRestaurant.listFoodRes[indexPath.row].foodPrice
+            cell.priceFood.text = "Giá: \(FoodInRestaurant.listFoodRes[indexPath.row].foodPrice)"
             cell.indexPath = indexPath.row
-            cell.qualityFood.text = FoodInRestaurant.listFoodRes[indexPath.row].foodAmount
-            cell.timeFood.text = FoodInRestaurant.listFoodRes[indexPath.row].foodTime
+            cell.qualityFood.text = "Số lượng: \(FoodInRestaurant.listFoodRes[indexPath.row].foodAmount)"
+            cell.timeFood.text = "\(FoodInRestaurant.listFoodRes[indexPath.row].foodTime) phút"
+            cell.txtQualityFood.text = "\(FoodInRestaurant.listFoodRes[indexPath.row].numberOfOrder)"
             cell.btnEdit.isHidden = true
             cell.btnClose.isHidden = true
             cell.elementChooseQuality.isHidden = false
@@ -132,11 +138,42 @@ extension OrderFoodViewController: UICollectionViewDelegate, UICollectionViewDel
 }
 
 extension OrderFoodViewController: ActionChooseQualytiOrderDelegate {
-    func addFoodOrder(food: Food, index: Int) {
-        listFoodOrder.append(food)
+    func addFoodOrder(food: Food?, index: Int) {
+        if FoodInRestaurant.listFoodRes[index].numberOfOrder < 0 {
+            FoodInRestaurant.listFoodRes[index].numberOfOrder = 0
+        } else {
+            FoodInRestaurant.listFoodRes[index].numberOfOrder += 1
+            sumQuality += FoodInRestaurant.listFoodRes[index].numberOfOrder
+            sumPrice += FoodInRestaurant.listFoodRes[index].foodPrice
+            txtQualityOrder.text = "\(sumQuality)"
+            priceFoodsOrder.text = "\(sumPrice)"
+            listFoodInResCollectionView.reloadData()
+        }
+        for order in listFoodOrder {
+            if order.foodId == FoodInRestaurant.listFoodRes[index].foodId {
+                return
+            } else {
+                listFoodOrder.append(FoodInRestaurant.listFoodRes[index])
+            }
+        }
     }
     
-    func deleteFoodOrder(food: Food, index: Int) {
-        print("")
+    func deleteFoodOrder(food: Food?, index: Int) {
+        if FoodInRestaurant.listFoodRes[index].numberOfOrder <= 0 {
+            FoodInRestaurant.listFoodRes[index].numberOfOrder = 0
+        } else {
+            FoodInRestaurant.listFoodRes[index].numberOfOrder -= 1
+            sumQuality -= FoodInRestaurant.listFoodRes[index].numberOfOrder
+            sumPrice -= FoodInRestaurant.listFoodRes[index].foodPrice
+//            for order in 0..<listFoodOrder.count {
+//                if listFoodOrder[order].foodId == FoodInRestaurant.listFoodRes[index].foodId {
+//                    listFoodOrder.remove(at: order)
+//                }
+//            }
+            txtQualityOrder.text = "\(sumQuality)"
+            priceFoodsOrder.text = "\(sumPrice)"
+            listFoodInResCollectionView.reloadData()
+        }
     }
+    
 }

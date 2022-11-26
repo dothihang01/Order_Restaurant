@@ -7,13 +7,13 @@
 
 import UIKit
 protocol ActionEditFoodResDelegate {
-    func editFoodRestaurant(food: Food)
-    func deleteFoodRes(food: Food, index: Int)
+    func editFoodRestaurant(food: Food?)
+    func deleteFoodRes(food: Food?, index: Int)
 }
 
 protocol ActionChooseQualytiOrderDelegate {
-    func addFoodOrder(food: Food, index: Int)
-    func deleteFoodOrder(food: Food, index: Int)
+    func addFoodOrder(food: Food?, index: Int)
+    func deleteFoodOrder(food: Food?, index: Int)
 }
 
 class MenuCollectionViewCell: UICollectionViewCell {
@@ -39,19 +39,19 @@ class MenuCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func editFoodRestaurant(_ sender: Any) {
-        delegateUpdate?.editFoodRestaurant(food: Food(foodId: 0, foodName: nameFood.text ?? "", foodPrice: priceFood.text ?? "", foodDescription: descripFood.text ?? "", foodImage: "" , foodAmount: qualityFood.text ?? "", foodTime: timeFood.text ?? "", foodCategory: "", numberOfOrder: 3))
+        delegateUpdate?.editFoodRestaurant(food: Food(foodId: 0, foodName: nameFood.text ?? "", foodPrice: Int(priceFood.text ?? "") ?? 0, foodDescription: descripFood.text ?? "", foodImage: "" , foodAmount: 0, foodTime: timeFood.text ?? "", foodCategory: "", numberOfOrder: 3))
     }
     
     @IBAction func deleteFoodRes(_ sender: Any) {
-        delegateUpdate?.deleteFoodRes(food: Food(foodId: 0, foodName: food?.foodName ?? "", foodPrice: food?.foodPrice ?? "", foodDescription: food?.foodDescription ?? "", foodImage: "", foodAmount: food?.foodAmount ?? "", foodTime: food?.foodTime ?? "", foodCategory: food?.foodCategory ?? "", numberOfOrder: 6), index: indexPath ?? 0)
+        delegateUpdate?.deleteFoodRes(food: Food(foodId: 0, foodName: food?.foodName ?? "", foodPrice: food?.foodPrice ?? 0, foodDescription: food?.foodDescription ?? "", foodImage: "", foodAmount: 0, foodTime: food?.foodTime ?? "", foodCategory: food?.foodCategory ?? "", numberOfOrder: 6), index: indexPath ?? 0)
     }
     
     @IBAction func addFoodOrder(_ sender: Any) {
-        delegateAction?.addFoodOrder(food: food!, index: indexPath ?? 0)
+        delegateAction?.addFoodOrder(food: food, index: indexPath ?? 0)
     }
     
     @IBAction func deleteFoodOrder(_ sender: Any) {
-        delegateAction?.deleteFoodOrder(food: food!, index: indexPath ?? 0)
+        delegateAction?.deleteFoodOrder(food: food, index: indexPath ?? 0)
     }
     
 }

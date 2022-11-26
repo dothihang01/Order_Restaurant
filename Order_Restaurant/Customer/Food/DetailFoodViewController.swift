@@ -22,9 +22,9 @@ class DetailFoodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imgFood.image = UIImage(named: "\(String(describing: aFoodDetail?.foodImage))")
-        self.lblFoodAmount.text = aFoodDetail?.foodAmount
+        self.lblFoodAmount.text = "\(aFoodDetail?.foodAmount)"
         self.lblNameFood.text = aFoodDetail?.foodName
-        self.lblPriceFood.text = aFoodDetail?.foodPrice
+        self.lblPriceFood.text = "\(aFoodDetail?.foodPrice)"
         self.lblFoodDescription.text = aFoodDetail?.foodDescription
         self.lblTimeFood.text = aFoodDetail?.foodTime
         createFood()
@@ -49,11 +49,11 @@ class DetailFoodViewController: UIViewController {
     }
 
     func createFood() {
-        listFood.append(Food(foodId: 0, foodName: "Gà rán", foodPrice: "200000", foodDescription: "Gà ròn ngon, nóng hổi", foodImage: "Chicken", foodAmount: "4", foodTime: "20", foodCategory: "Gà", numberOfOrder: 4))
-        listFood.append(Food(foodId: 0, foodName: "Cánh gà chiên ròn", foodPrice: "200000", foodDescription: "Thơm thơm, cay cay, ngon tuyệt vời", foodImage: "Chicken", foodAmount: "4", foodTime: "20", foodCategory: "Gà", numberOfOrder: 3))
-        listFood.append(Food(foodId: 0, foodName: "Pepsi", foodPrice: "200000", foodDescription: "Đã quá Pepsi ơi", foodImage: "Chicken", foodAmount: "4", foodTime: "20", foodCategory: "Coca - Cola", numberOfOrder: 6))
-        listFood.append(Food(foodId: 0, foodName: "Gà rán cay", foodPrice: "200000", foodDescription: "Gà ròn ngon, nóng hổi", foodImage: "Chicken", foodAmount: "4", foodTime: "20", foodCategory: "Gà", numberOfOrder: 9))
-        listFood.append(Food(foodId: 0, foodName: "Gà chua ngọt", foodPrice: "200000", foodDescription: "Gà ròn ngon, nóng hổi", foodImage: "Chicken", foodAmount: "4", foodTime: "20", foodCategory: "Gà", numberOfOrder: 10))
+        listFood.append(Food(foodId: 0, foodName: "Gà rán", foodPrice: 200000, foodDescription: "Gà ròn ngon, nóng hổi", foodImage: "Chicken", foodAmount: 4, foodTime: "20", foodCategory: "Gà", numberOfOrder: 4))
+        listFood.append(Food(foodId: 0, foodName: "Cánh gà chiên ròn", foodPrice: 200000, foodDescription: "Thơm thơm, cay cay, ngon tuyệt vời", foodImage: "Chicken", foodAmount: 4, foodTime: "20", foodCategory: "Gà", numberOfOrder: 3))
+        listFood.append(Food(foodId: 0, foodName: "Pepsi", foodPrice: 200000, foodDescription: "Đã quá Pepsi ơi", foodImage: "Chicken", foodAmount: 4, foodTime: "20", foodCategory: "Coca - Cola", numberOfOrder: 6))
+        listFood.append(Food(foodId: 0, foodName: "Gà rán cay", foodPrice: 200000, foodDescription: "Gà ròn ngon, nóng hổi", foodImage: "Chicken", foodAmount: 4, foodTime: "20", foodCategory: "Gà", numberOfOrder: 9))
+        listFood.append(Food(foodId: 0, foodName: "Gà chua ngọt", foodPrice: 200000, foodDescription: "Gà ròn ngon, nóng hổi", foodImage: "Chicken", foodAmount: 4, foodTime: "20", foodCategory: "Gà", numberOfOrder: 10))
     }
 
     /*

@@ -9,12 +9,15 @@ import UIKit
 
 class YourMenuViewController: UIViewController {
 
+    @IBOutlet weak var sumPriceFoodOrder: UILabel!
     @IBOutlet weak var menuChoosedCollectionView: UICollectionView!
     @IBOutlet weak var viewQuality: UIView!
     @IBOutlet weak var viewSumPrice: UIView!
     @IBOutlet weak var buttonOrder: UIButton!
     
     @IBOutlet weak var addMenu: UIButton!
+    var listYourOrder: [Food] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -33,16 +36,25 @@ class YourMenuViewController: UIViewController {
         addMenu.layer.borderColor = CGColor(red: 255/255, green: 114/255, blue: 76/255, alpha: 1)
         self.menuChoosedCollectionView.register(UINib(nibName: "CustomMenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customMenuCollectionViewCell")
     }
-
+    @IBAction func addFood(_ sender: Any) {
+        let vc = OrderFoodViewController(nibName: "OrderFoodViewController", bundle: nil)
+        vc.listFoodOrder = listYourOrder
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension YourMenuViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return listYourOrder.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customMenuCollectionViewCell", for: indexPath) as! CustomMenuCollectionViewCell
+        cell.imgFoodOrder.image = UIImage(named: "\(listYourOrder[indexPath.row].foodImage)")
+        cell.nameFoodOrder.text = listYourOrder[indexPath.row].foodName
+        cell.priceFoodOrder.text = "\(listYourOrder[indexPath.row].foodPrice)"
+        cell.txtQualityFoodOrder.text = "\(listYourOrder[indexPath.row].numberOfOrder)"
         cell.layer.cornerRadius = 10
         return cell
     }
