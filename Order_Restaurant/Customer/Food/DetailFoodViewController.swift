@@ -21,7 +21,7 @@ class DetailFoodViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imgFood.image = UIImage(named: "\(String(describing: aFoodDetail?.foodImage))")
+        self.imgFood.image = UIImage(named: "\(aFoodDetail?.foodImage)")
         self.lblFoodAmount.text = "\(aFoodDetail?.foodAmount)"
         self.lblNameFood.text = aFoodDetail?.foodName
         self.lblPriceFood.text = "\(aFoodDetail?.foodPrice)"

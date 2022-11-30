@@ -17,6 +17,7 @@ class YourMenuViewController: UIViewController {
     
     @IBOutlet weak var addMenu: UIButton!
     var listYourOrder: [Food] = []
+    var aRestaurant: Restaurant?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,13 @@ class YourMenuViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func actionOrderFoood(_ sender: Any) {
+        let vc = BillRestaurantViewController(nibName: "BillRestaurantViewController", bundle: nil)
+//        vc.viewTabBill.isHidden = true
+        vc.headerRes = aRestaurant
+        vc.listOrder = listYourOrder
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension YourMenuViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

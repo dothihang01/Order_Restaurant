@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddAccountDelegate {
-    func addAcc(register: Account)
+    func addAcc(registerRes: Restaurant?, registerCus: Customer?)
 }
 
 class RegisterOfCustomerViewController: UIViewController {
@@ -18,10 +18,12 @@ class RegisterOfCustomerViewController: UIViewController {
     @IBOutlet weak var inputPasswordRegister: TextField!
     var delegate: AddAccountDelegate?
     
-    var listRegister: [Account] = []
-    var getAccount: Account?
+    var listRegister: [Restaurant] = []
+    var getAccountRes: Restaurant?
+    var getCustomer: Customer?
     var isSelectedCustomer = false
     var isSelectedRestaurant = false
+    var isSelected: Bool = false
     var filter: CIFilter!
     
     override func viewDidLoad() {
@@ -43,21 +45,23 @@ class RegisterOfCustomerViewController: UIViewController {
 
         if isSelectedCustomer == true {
 //            getAccount?.typeAccount = 0
-            getAccount?.accountName = name
-            getAccount?.password = password
-            getAccount = Account(accountId: 4, accountName: name, password: password, typeAccount: 0)
+            getCustomer?.account?.accountName = name
+            getCustomer?.account?.password = password
+            getCustomer?.account = Account(accountId: 4, accountName: name, password: password, typeAccount: 0)
+//            isSelected = true
             displayMyAlertMessage(userMessage:"Đăng ký thành công")
 
         }
         
         else if isSelectedRestaurant == true {
 //            getAccount?.typeAccount = 1
-            getAccount?.accountName =  name
-            getAccount?.password =  password
-            getAccount = Account(accountId: 4, accountName: name, password: password, typeAccount: 1)
+            getAccountRes?.account?.accountName =  name
+            getAccountRes?.account?.password =  password
+            getAccountRes?.account = Account(accountId: 4, accountName: name, password: password, typeAccount: 1)
+//            isSelected = false
             displayMyAlertMessage(userMessage:"Đăng ký thành công")
         }
-            delegate?.addAcc(register: getAccount!)
+        delegate?.addAcc(registerRes: getAccountRes, registerCus: getCustomer)
             self.navigationController?.popViewController(animated: true)
         
         }

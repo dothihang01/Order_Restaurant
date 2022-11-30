@@ -11,27 +11,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HeaderCell" customModule="Order_Restaurant" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="425" height="158"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="133" y="80"/>
-        </collectionViewCell>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XHh-3b-Zxg" customClass="CustomFavouriteCollectionViewCell" customModule="Order_Restaurant" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="306" height="50"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="306" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="425" height="158"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 4" translatesAutoresizingMaskIntoConstraints="NO" id="dRg-uy-Z9n">
-                        <rect key="frame" x="10" y="5.5" width="39" height="39"/>
+                        <rect key="frame" x="5" y="59" width="39" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="HJ3-CO-TbR"/>
+                        </constraints>
                     </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-fo-CmT">
+                        <rect key="frame" x="54" y="61" width="186" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai Express" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDS-Ii-MQn">
+                                <rect key="frame" x="0.0" y="0.0" width="186" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72A Nguyễn Trãi, Khương Đình, Hà Nội" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-2E-EDX">
+                                <rect key="frame" x="0.0" y="18" width="186" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gva-4T-Zal">
-                        <rect key="frame" x="246" y="2" width="50" height="46"/>
+                        <rect key="frame" x="365" y="56" width="50" height="46"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/10/2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mry-bO-POL">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="23"/>
@@ -49,41 +59,27 @@
                             </button>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-fo-CmT">
-                        <rect key="frame" x="55" y="0.0" width="150" height="50"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai Express" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDS-Ii-MQn">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72A Nguyễn Trãi, Khương Đình, Hà Nội" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-2E-EDX">
-                                <rect key="frame" x="0.0" y="25" width="150" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="150" id="t7p-dL-tWG"/>
-                        </constraints>
-                    </stackView>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="Lp0-fb-Ymo"/>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="dRg-uy-Z9n" firstAttribute="centerY" secondItem="XHh-3b-Zxg" secondAttribute="centerY" id="2zX-O5-9dC"/>
-                <constraint firstAttribute="trailing" secondItem="gva-4T-Zal" secondAttribute="trailing" constant="10" id="5bj-bK-HRZ"/>
-                <constraint firstItem="gva-4T-Zal" firstAttribute="centerY" secondItem="XHh-3b-Zxg" secondAttribute="centerY" id="Pb5-qX-QCt"/>
-                <constraint firstItem="dRg-uy-Z9n" firstAttribute="leading" secondItem="XHh-3b-Zxg" secondAttribute="leading" constant="10" id="bHK-VJ-4Ph"/>
-                <constraint firstItem="S7T-fo-CmT" firstAttribute="leading" secondItem="dRg-uy-Z9n" secondAttribute="trailing" constant="6" id="ifx-SY-c4u"/>
-                <constraint firstAttribute="bottom" secondItem="S7T-fo-CmT" secondAttribute="bottom" id="mW6-Ad-px6"/>
-                <constraint firstItem="S7T-fo-CmT" firstAttribute="top" secondItem="XHh-3b-Zxg" secondAttribute="top" id="xLD-dR-iNv"/>
+                <constraint firstItem="S7T-fo-CmT" firstAttribute="leading" secondItem="dRg-uy-Z9n" secondAttribute="trailing" constant="10" id="25X-pr-rDe"/>
+                <constraint firstAttribute="trailing" secondItem="gva-4T-Zal" secondAttribute="trailing" constant="10" id="B6j-YT-yeI"/>
+                <constraint firstItem="S7T-fo-CmT" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="S7u-E1-zgg"/>
+                <constraint firstItem="dRg-uy-Z9n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="fJN-KV-5Ew"/>
+                <constraint firstItem="dRg-uy-Z9n" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="j6W-zb-Y4C"/>
+                <constraint firstItem="gva-4T-Zal" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wlv-De-FoQ"/>
             </constraints>
-            <size key="customSize" width="306" height="50"/>
-            <point key="canvasLocation" x="349.27536231884062" y="-2.0089285714285712"/>
+            <size key="customSize" width="425" height="158"/>
+            <connections>
+                <outlet property="addressRes" destination="gtZ-2E-EDX" id="4p1-Y5-fFk"/>
+                <outlet property="dateTime" destination="mry-bO-POL" id="XaI-V6-8S2"/>
+                <outlet property="imgRes" destination="dRg-uy-Z9n" id="mJC-N8-V5P"/>
+                <outlet property="nameRes" destination="VDS-Ii-MQn" id="xTi-9J-yzU"/>
+                <outlet property="rate" destination="nkn-9n-GZt" id="d3P-eW-kkk"/>
+            </connections>
+            <point key="canvasLocation" x="-360.14492753623193" y="70.982142857142847"/>
         </collectionViewCell>
     </objects>
     <resources>

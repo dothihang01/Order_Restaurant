@@ -13,18 +13,18 @@ class RestaurantHomeViewController: UIViewController {
     @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var imgQr: UIImageView!
     @IBOutlet weak var lblAddress: UILabel!
-    var listRestaurant: [Restaurant] = []
+//    var listRestaurant: [Restaurant] = []
+    var aRestaurant: Restaurant?
     
-    
-    var restaurants: Restaurant? {
-           didSet {
-               if isViewLoaded {
-                   lblName.text = restaurants?.restaurantName
-                   lblDesc.text = restaurants?.restaurantDescription
-                   lblAddress.text = restaurants?.restaurantAddress
-               }
-           }
-       }
+//    var restaurants: Restaurant? {
+//           didSet {
+//               if isViewLoaded {
+//                   lblName.text = restaurants?.restaurantName
+//                   lblDesc.text = restaurants?.restaurantDescription
+//                   lblAddress.text = restaurants?.restaurantAddress
+//               }
+//           }
+//       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +32,16 @@ class RestaurantHomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        for restaurant in listRestaurant {
-            lblName.text = restaurant.restaurantName
-            lblDesc.text = restaurant.restaurantDescription
-            lblAddress.text = restaurant.restaurantAddress
-        }
+        lblName.text = aRestaurant?.restaurantName
+        lblDesc.text = aRestaurant?.restaurantDescription
+        lblAddress.text = aRestaurant?.restaurantAddress
     }
     
     func createDataRestaurant() {
-        listRestaurant.append(Restaurant(restaurantId: 0, restaurantName: "Mc Donald", restaurantAddress: "Nguyễn Trãi, Thanh Xuân", restaurantDescription: "Gà rán - CocaCola", restaurantImage: "McDonald", numberOfVisit: 0, typeAccount: 0, logoRes: "McDonald", location: 5, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 10)]))
-        listRestaurant.append(Restaurant(restaurantId: 1, restaurantName: "Lotteria", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, typeAccount: 0, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)]))
+//        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 0, restaurantName: "Mc Donald", restaurantAddress: "Nguyễn Trãi, Thanh Xuân", restaurantDescription: "Gà rán - CocaCola", restaurantImage: "McDonald", numberOfVisit: 0, logoRes: "McDonald", location: 5, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 10)], account: Account(accountId: 0, accountName: "abc", password: "000000", typeAccount: 0)))
+//        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 1, restaurantName: "Lotteria", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], account: Account(accountId: 1, accountName: "def", password: "111111", typeAccount: 1)))
+//        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 2, restaurantName: "Lotteria", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], account: Account(accountId: 2, accountName: "abc", password: "222222", typeAccount: 0)))
+//        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 3, restaurantName: "Lotteria", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], account: Account(accountId: 3, accountName: "def", password: "333333", typeAccount: 1)))
     }
     
     @IBAction func goToMenuRestaurant(_ sender: Any) {

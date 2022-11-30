@@ -59,6 +59,7 @@ class OrderFoodViewController: UIViewController {
     @IBAction func actionTieptuc(_ sender: Any) {
         let vc = YourMenuViewController(nibName: "YourMenuViewController", bundle: nil)
         vc.listYourOrder = listFoodOrder
+        vc.aRestaurant = aRes
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -118,13 +119,13 @@ extension OrderFoodViewController: UICollectionViewDelegate, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = DetailFoodViewController(nibName: "DetailFoodViewController", bundle: nil)
-        if collectionView == self.listFoodInResCollectionView {
-            aFood = FoodInRestaurant.listFoodRes[indexPath.row]
-            vc.aFoodDetail = aFood
-        } else {
+//        if collectionView == self.listFoodInResCollectionView {
+//            aFood = FoodInRestaurant.listFoodRes[indexPath.row]
+//            vc.aFoodDetail = aFood
+//        } else {
             aFood = listFoodBestSaler[indexPath.row]
             vc.aFoodDetail = aFood
-        }
+//        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -143,19 +144,19 @@ extension OrderFoodViewController: ActionChooseQualytiOrderDelegate {
             FoodInRestaurant.listFoodRes[index].numberOfOrder = 0
         } else {
             FoodInRestaurant.listFoodRes[index].numberOfOrder += 1
+            listFoodOrder.append(FoodInRestaurant.listFoodRes[index])
             sumQuality += FoodInRestaurant.listFoodRes[index].numberOfOrder
             sumPrice += FoodInRestaurant.listFoodRes[index].foodPrice
             txtQualityOrder.text = "\(sumQuality)"
             priceFoodsOrder.text = "\(sumPrice)"
             listFoodInResCollectionView.reloadData()
         }
-        for order in listFoodOrder {
-            if order.foodId == FoodInRestaurant.listFoodRes[index].foodId {
-                return
-            } else {
-                listFoodOrder.append(FoodInRestaurant.listFoodRes[index])
-            }
-        }
+//        for order in listFoodOrder {
+//            if order.foodId == FoodInRestaurant.listFoodRes[index].foodId {
+//                return
+//            } else {
+//            }
+//        }
     }
     
     func deleteFoodOrder(food: Food?, index: Int) {

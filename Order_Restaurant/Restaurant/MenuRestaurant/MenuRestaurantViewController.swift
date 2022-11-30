@@ -31,10 +31,15 @@ class MenuRestaurantViewController: UIViewController {
         listShowCategory.append(Category(categoryId: 1, categoryName: "Mì"))
         listShowCategory.append(Category(categoryId: 2, categoryName: "Nước"))
         
+        
         listShowFood.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 0))
         listShowFood.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 0))
         listShowFood.append(Food(foodId: 0, foodName: "Pizza - Hải sản", foodPrice: 64000, foodDescription: "Topping: Cua, ghẹ, tôm,...", foodImage: "Pizza", foodAmount: 10, foodTime: "20", foodCategory: "Pizza", numberOfOrder: 0))
         listShowFood.append(Food(foodId: 0, foodName: "Burger - King", foodPrice: 35000, foodDescription: "Burger kẹp thịt bò, rau củ, đẫm sốt", foodImage: "Burger", foodAmount: 20, foodTime: "10", foodCategory: "Burger", numberOfOrder: 0))
+        for res in FoodInRestaurant.listResGeneral {
+            res.food = listShowFood
+        }
+
         FoodInRestaurant.listFoodRes = listShowFood
     }
     
@@ -43,6 +48,9 @@ class MenuRestaurantViewController: UIViewController {
         listFoodOrder.append(Food(foodId: 0, foodName: "Burger - King", foodPrice: 35000, foodDescription: "Burger kẹp thịt bò, rau củ, đẫm sốt", foodImage: "Burger", foodAmount: 20, foodTime: "10", foodCategory: "Burger", numberOfOrder: 0))
         listFoodOrder.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 9))
         listFoodOrder.append(Food(foodId: 0, foodName: "Gà", foodPrice: 24000, foodDescription: "Ròn, đậm sốt", foodImage: "Chicken", foodAmount: 30, foodTime: "10", foodCategory: "Gà", numberOfOrder: 10))
+        for res in FoodInRestaurant.listResGeneral {
+            res.foodOrder = listFoodOrder
+        }
         FoodInRestaurant.listFoodOrder = self.listFoodOrder
     }
 

@@ -32,10 +32,10 @@ class HomePageViewController: UIViewController, UITabBarControllerDelegate {
     }
     
     func createDataRes() {
-        listRestaurant.append(Restaurant(restaurantId: 0, restaurantName: "Highland", restaurantAddress: "262, Nguyễn Trãi", restaurantDescription: "coffee - tea", restaurantImage: "combo - 1", numberOfVisit: 3, typeAccount: 0, logoRes: "highland", location: 3, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 10)]))
-        listRestaurant.append(Restaurant(restaurantId: 1, restaurantName: "McDonald's", restaurantAddress: "262, Vũ Trọng Phụng", restaurantDescription: "burger - chicken", restaurantImage: "combo - 2", numberOfVisit: 5, typeAccount: 0, logoRes: "McDonald", location: 8, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 12)]))
-        listRestaurant.append(Restaurant(restaurantId: 2, restaurantName: "KFC", restaurantAddress: "34, Nguyễn Trãi", restaurantDescription: "fast - food", restaurantImage: "kfc", numberOfVisit: 7, typeAccount: 0, logoRes: "Lotteria", location: 10, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)]))
-        listRestaurant.append(Restaurant(restaurantId: 3, restaurantName: "Lotteria", restaurantAddress: "34, Nguyễn Trãi", restaurantDescription: "fast - food", restaurantImage: "shushi", numberOfVisit: 7, typeAccount: 0, logoRes: "Lotteria", location: 3, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 14)]))
+        listRestaurant.append(Restaurant(restaurantId: 0, restaurantName: "Highland", restaurantAddress: "262, Nguyễn Trãi", restaurantDescription: "coffee - tea", restaurantImage: "combo - 1", numberOfVisit: 3, logoRes: "highland", location: 3, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 10)], foodOrder: [], account: Account(accountId: 0, accountName: "", password: "", typeAccount: 0)))
+        listRestaurant.append(Restaurant(restaurantId: 1, restaurantName: "McDonald's", restaurantAddress: "262, Vũ Trọng Phụng", restaurantDescription: "burger - chicken", restaurantImage: "combo - 2", numberOfVisit: 5, logoRes: "McDonald", location: 8, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 12)], foodOrder: [], account: Account(accountId: 0, accountName: "", password: "", typeAccount: 0)))
+        listRestaurant.append(Restaurant(restaurantId: 2, restaurantName: "KFC", restaurantAddress: "34, Nguyễn Trãi", restaurantDescription: "fast - food", restaurantImage: "kfc", numberOfVisit: 7, logoRes: "Lotteria", location: 10, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], foodOrder: [], account: Account(accountId: 0, accountName: "", password: "", typeAccount: 0)))
+        listRestaurant.append(Restaurant(restaurantId: 3, restaurantName: "Lotteria", restaurantAddress: "34, Nguyễn Trãi", restaurantDescription: "fast - food", restaurantImage: "shushi", numberOfVisit: 7, logoRes: "Lotteria", location: 3, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 14)], foodOrder: [], account: Account(accountId: 0, accountName: "", password: "", typeAccount: 0)))
         
         for restaurant in listRestaurant {
             if restaurant.numberOfVisit > 4 {
@@ -48,8 +48,8 @@ class HomePageViewController: UIViewController, UITabBarControllerDelegate {
     }
     
     func createDateCustomer() {
-        listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Thị Hoa", customerDob: "10/02/2000", customerGender: "Nữ"))
-        listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Văn Nam", customerDob: "10/09/2000", customerGender: "Nam"))
+//        listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Thị Hoa", customerDob: "10/02/2000", customerGender: "Nữ", foodOrder: FoodInRestaurant.listFoodOrder, account: <#T##Account?#>))
+//        listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Văn Nam", customerDob: "10/09/2000", customerGender: "Nam"))
     }
 }
 
@@ -109,12 +109,13 @@ extension HomePageViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = OrderFoodViewController(nibName: "OrderFoodViewController", bundle: nil)
 //        vc.listRes = listRestaurant
-        if collectionView == self.orderMenuCollectionView {
-            vc.aRes = self.listRecent[indexPath.row]
-        }
-        else if collectionView == self.roundCollectionView {
+//        if collectionView == self.roundCollectionView {
             vc.aRes = listRestarantVisted[indexPath.row]
-        }
+//        }
+//        else if collectionView == self.roundCollectionView {
+//        vc.aRes = self.listRecent[indexPath.row]
+
+//        }
         self.navigationController?.pushViewController(vc, animated: true)
 
     }

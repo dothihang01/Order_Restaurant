@@ -69,10 +69,14 @@ class Customer {
     var customerName: String
     var customerDob: String
     var customerGender: String
-    init(customerId: Int, customerName: String, customerDob: String, customerGender: String) {
+    var foodOrder: [Food]
+    var account: Account?
+    init(customerId: Int, customerName: String, customerDob: String, customerGender: String, foodOrder: [Food], account: Account?) {
         self.customerId = customerId
         self.customerName = customerName
         self.customerDob = customerDob
+        self.foodOrder = foodOrder
+        self.account = account
         self.customerGender = customerGender
     }
 }
@@ -85,22 +89,24 @@ class Restaurant {
     var restaurantImage: String
     var numberOfVisit: Int
     var logoRes: String
-    var typeAccount: Int
     var location: Int
     var food: [Food]
     var table: [Table]
-    init(restaurantId: Int, restaurantName: String, restaurantAddress: String, restaurantDescription: String, restaurantImage: String, numberOfVisit: Int, typeAccount: Int, logoRes: String, location: Int, food: [Food], table: [Table]) {
+    var foodOrder: [Food]
+    var account: Account?
+    init(restaurantId: Int, restaurantName: String, restaurantAddress: String, restaurantDescription: String, restaurantImage: String, numberOfVisit: Int, logoRes: String, location: Int, food: [Food], table: [Table], foodOrder: [Food], account: Account?) {
         self.restaurantId = restaurantId
         self.restaurantName = restaurantName
         self.restaurantAddress = restaurantAddress
         self.restaurantDescription = restaurantDescription
         self.restaurantImage = restaurantImage
         self.numberOfVisit = numberOfVisit
-        self.typeAccount = typeAccount
+        self.account = account
         self.logoRes = logoRes
         self.location = location
         self.food = food
         self.table = table
+        self.foodOrder = foodOrder
     }
 }
 

@@ -9,7 +9,8 @@ import UIKit
 
 class Main: UIViewController, UITextViewDelegate {
     
-    var listLogin: [Account] = []
+//    var listLogin: [Account] = []
+//    var listLogin: [Restaurant] = []
     
     
     @IBOutlet weak var userName: UITextField!
@@ -23,10 +24,13 @@ class Main: UIViewController, UITextViewDelegate {
     // 0: khach hang
     // 1: nha hang
     func createAccount() {
-        listLogin.append(Account(accountId: 0, accountName: "abc", password: "000000", typeAccount: 0))
-        listLogin.append(Account(accountId: 1, accountName: "def", password: "111111", typeAccount: 1))
-        listLogin.append(Account(accountId: 2, accountName: "abc", password: "222222", typeAccount: 0))
-        listLogin.append(Account(accountId: 3, accountName: "def", password: "333333", typeAccount: 1))
+        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 0, restaurantName: "Mc Donald", restaurantAddress: "Nguyễn Trãi, Thanh Xuân", restaurantDescription: "Gà rán - CocaCola", restaurantImage: "McDonald", numberOfVisit: 0, logoRes: "McDonald", location: 5, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 10)], foodOrder: [], account: Account(accountId: 0, accountName: "abc", password: "111111", typeAccount: 1)))
+        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 1, restaurantName: "The house coffe", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], foodOrder: [], account: Account(accountId: 1, accountName: "def", password: "111111", typeAccount: 1)))
+        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 2, restaurantName: "Hightland", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, logoRes: "Chicken", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], foodOrder: [], account: Account(accountId: 2, accountName: "abc", password: "222222", typeAccount: 1)))
+        FoodInRestaurant.listResGeneral.append(Restaurant(restaurantId: 3, restaurantName: "Jolibee", restaurantAddress: "Nguyễn Tuân, Thanh Xuân", restaurantDescription: "Gà rán - Kem", restaurantImage: "Lotteria", numberOfVisit: 3, logoRes: "Lotteria", location: 1, food: FoodInRestaurant.listFoodRes, table: [Table(numberTable: 20)], foodOrder: [], account: Account(accountId: 3, accountName: "def", password: "333333", typeAccount: 1)))
+        FoodInRestaurant.listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Thị Hoà", customerDob: "", customerGender: "Nữ", foodOrder: FoodInRestaurant.listFoodOrder, account: Account(accountId: 0, accountName: "abc", password: "000000", typeAccount: 0)))
+        FoodInRestaurant.listCustomer.append(Customer(customerId: 0, customerName: "Đỗ Thị Hoà", customerDob: "", customerGender: "Nữ", foodOrder: FoodInRestaurant.listFoodOrder, account: Account(accountId: 0, accountName: "def", password: "000000", typeAccount: 0)))
+        
     }
     
     func displayMyAlertMessage(userMessage:String){
@@ -39,23 +43,29 @@ class Main: UIViewController, UITextViewDelegate {
     @IBAction func loginAccount(_ sender: Any) {
         let homeCustomer = HomePageViewController(nibName: "HomePageViewController", bundle: nil)
         let homeRestaurant = RestaurantHomeViewController(nibName: "RestaurantHomeViewController", bundle: nil)
-        var account: Account?
-        for login in listLogin {
-            if userName.text! == login.accountName && password.text! == login.password  {
+        var account: Restaurant?
+        var accountCus: Customer?
+        for login in FoodInRestaurant.listResGeneral {
+            if userName.text! == login.account?.accountName && password.text! == login.account?.password  {
                 account = login
             }
         }
         
-        if account == nil {
+        for login in FoodInRestaurant.listCustomer {
+            if userName.text! == login.account?.accountName && password.text! == login.account?.password  {
+                accountCus = login
+            }
+        }
+        
+        if account == nil || accountCus == nil {
             displayMyAlertMessage(userMessage: "Vui lòng nhập lại!!!")
-            
-
         } else {
-            if account?.typeAccount == 0 {
+            if account?.account?.typeAccount == 0 {
                 self.navigationController?.pushViewController(homeCustomer, animated: true)
                 displayMyAlertMessage(userMessage: "Đăng nhập thành công!!!")
-            } else if account?.typeAccount == 1 {
+            } else if accountCus?.account?.typeAccount == 1 {
                 self.navigationController?.pushViewController(homeRestaurant, animated: true)
+                homeRestaurant.aRestaurant = account
                 displayMyAlertMessage(userMessage: "Đăng nhập thành công!!!")
             }
         }
@@ -64,15 +74,18 @@ class Main: UIViewController, UITextViewDelegate {
     @IBAction func registerAccount(_ sender: Any) {
         let register = RegisterOfCustomerViewController(nibName: "RegisterOfCustomerViewController", bundle: nil)
         self.navigationController?.pushViewController(register, animated: true)
-        register.listRegister = listLogin
+        register.listRegister = FoodInRestaurant.listResGeneral
         register.delegate = self
     }
 }
 
 extension Main: AddAccountDelegate {
-    func addAcc(register: Account) {
-        listLogin.append(register)
-        print(listLogin.count)
+    func addAcc(registerRes: Restaurant?, registerCus: Customer?) {
+ 
+        FoodInRestaurant.listCustomer.append(registerCus ?? Customer(customerId: 0, customerName: "", customerDob: "", customerGender: "", foodOrder: [], account: Account(accountId: 0, accountName: "", password: "", typeAccount: 0)))
+        
+        FoodInRestaurant.listResGeneral.append(registerRes ?? Restaurant(restaurantId: 0, restaurantName: "", restaurantAddress: "", restaurantDescription: "", restaurantImage: "", numberOfVisit: 0, logoRes: "", location: 0, food: [], table: [], foodOrder: [], account: Account(accountId: 0, accountName: "", password: "", typeAccount: 1)))
+        print(FoodInRestaurant.listResGeneral.count)
     }
 }
 

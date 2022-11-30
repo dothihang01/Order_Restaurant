@@ -8,7 +8,11 @@
 import UIKit
 
 class OrderedCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var nameOrder: UILabel!
+    @IBOutlet weak var txtNote: UILabel!
+    @IBOutlet weak var qualityOrder: UILabel!
+    @IBOutlet weak var imgOrder: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
