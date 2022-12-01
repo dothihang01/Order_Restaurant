@@ -21,7 +21,7 @@ class TabBarController: UITabBarController {
         viewControllers = [
             createNavController(for: HomePageViewController(), image: UIImage(systemName: "house")!),
             createNavController(for: FavouriteViewController(), image: UIImage(systemName: "heart")!),
-//            createNavController(for: YourMenuViewController(), image: UIImage(systemName: "menucard")!),
+            createNavController(for: YourMenuViewController(), image: UIImage(systemName: "menucard")!),
             createNavController(for: InfomationCustomerViewController(), image: UIImage(systemName: "person")!)
         ]
     }
@@ -35,4 +35,10 @@ class TabBarController: UITabBarController {
     }
 
 }
+
+extension TabBarController : UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    }
+}
+
     

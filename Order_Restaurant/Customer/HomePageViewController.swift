@@ -12,6 +12,7 @@ class HomePageViewController: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet weak var orderMenuCollectionView: UICollectionView!
     @IBOutlet weak var roundCollectionView: UICollectionView!
+    @IBOutlet weak var tabBar: UITabBar!
     var arrImageRestaurant = [UIImage(named: "Rectangle 21-1"), UIImage(named: "Rectangle 21-2"), UIImage(named: "Rectangle 21")]
     
     var listCustomer: [Customer] = []
@@ -29,6 +30,9 @@ class HomePageViewController: UIViewController, UITabBarControllerDelegate {
         self.orderMenuCollectionView.register(UINib(nibName: "CustomVisitedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCollectionViewCell")
         self.roundCollectionView.register(UINib(nibName: "RoundCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "roundCollectionView")
         createDataRes()
+    }
+    
+    override func viewDidLayoutSubviews() {
     }
     
     func createDataRes() {

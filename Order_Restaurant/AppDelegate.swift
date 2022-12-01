@@ -13,7 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let frame = UIScreen.main.bounds
+        window = UIWindow(frame: frame)
+               window?.backgroundColor = .clear
+               let viewController = ScannerViewController()
+               
+               let homeNav = UINavigationController(rootViewController: viewController)
+               
+               window?.rootViewController = homeNav
+               window!.makeKeyAndVisible()
+        //        guard let windowScene = (scene as? UIWindowScene) else { return }
+        //        window = UIWindow(frame: UIScreen.main.bounds)
+        //               let home = TabBarController()
+        //               self.window?.rootViewController = home
+        //               window?.makeKeyAndVisible()
+        //               window?.windowScene = windowScene
         return true
     }
 

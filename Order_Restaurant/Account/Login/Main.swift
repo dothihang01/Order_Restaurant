@@ -9,12 +9,14 @@ import UIKit
 
 class Main: UIViewController, UITextViewDelegate {
     
-//    var listLogin: [Account] = []
+//    var listLogin: [Any] = []
 //    var listLogin: [Restaurant] = []
     
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
+    var check: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createAccount()
@@ -39,12 +41,13 @@ class Main: UIViewController, UITextViewDelegate {
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
     }
-
+    
     @IBAction func loginAccount(_ sender: Any) {
         let homeCustomer = HomePageViewController(nibName: "HomePageViewController", bundle: nil)
         let homeRestaurant = RestaurantHomeViewController(nibName: "RestaurantHomeViewController", bundle: nil)
         var account: Restaurant?
         var accountCus: Customer?
+        
         for login in FoodInRestaurant.listResGeneral {
             if userName.text! == login.account?.accountName && password.text! == login.account?.password  {
                 account = login

@@ -11,6 +11,7 @@ class RestaurantHomeViewController: UIViewController {
     
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var imgQr: UIImageView!
     @IBOutlet weak var lblAddress: UILabel!
 //    var listRestaurant: [Restaurant] = []

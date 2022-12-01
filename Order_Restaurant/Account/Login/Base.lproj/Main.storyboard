@@ -78,7 +78,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="button" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="loginAccount:" destination="EBk-cf-AFK" eventType="touchUpInside" id="wYW-Fp-0PA"/>
+                                    <action selector="loginAccount:" destination="EBk-cf-AFK" eventType="touchUpInside" id="Y7E-bb-zsZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn đã có tài khoản chưa?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in2-2E-0qI">

@@ -70,6 +70,11 @@
 		67B6635028F5A11200D5D981 /* ReviewOfCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B6634E28F5A11200D5D981 /* ReviewOfCustomerViewController.xib */; };
 		67B6635428F5A4CC00D5D981 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B6635228F5A4CC00D5D981 /* ReviewCollectionViewCell.swift */; };
 		67B6635528F5A4CC00D5D981 /* ReviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B6635328F5A4CC00D5D981 /* ReviewCollectionViewCell.xib */; };
+		67D010CF2938BC9F000AF56E /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D010CD2938BC9F000AF56E /* QRViewController.swift */; };
+		67D010D02938BC9F000AF56E /* QRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67D010CE2938BC9F000AF56E /* QRViewController.xib */; };
+		67FF0F7C2936FA970003B22A /* NavigationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F7B2936FA970003B22A /* NavigationBase.swift */; };
+		67FF0F822936FAD80003B22A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F7F2936FAD70003B22A /* BaseViewController.swift */; };
+		67FF0F832936FAD80003B22A /* TabbarBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FF0F802936FAD70003B22A /* TabbarBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +143,11 @@
 		67B6634E28F5A11200D5D981 /* ReviewOfCustomerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewOfCustomerViewController.xib; sourceTree = "<group>"; };
 		67B6635228F5A4CC00D5D981 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		67B6635328F5A4CC00D5D981 /* ReviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		67D010CD2938BC9F000AF56E /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		67D010CE2938BC9F000AF56E /* QRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
+		67FF0F7B2936FA970003B22A /* NavigationBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBase.swift; sourceTree = "<group>"; };
+		67FF0F7F2936FAD70003B22A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		67FF0F802936FAD70003B22A /* TabbarBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +180,10 @@
 		6735A62728F08BF6003EBFF9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				67FF0F7D2936FAD70003B22A /* Base */,
 				6735A62C28F08DC9003EBFF9 /* TabBarController.swift */,
 				6735A62D28F08DC9003EBFF9 /* TabBarController.xib */,
+				67FF0F7B2936FA970003B22A /* NavigationBase.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -380,6 +392,7 @@
 		67A7143028EB159E0062A8A7 /* Order_Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				67D010CC2938BC85000AF56E /* QR */,
 				6753ACB128FEDD5C00BD9426 /* Restaurant */,
 				6735A62728F08BF6003EBFF9 /* TabBar */,
 				67A7145228EB4F3E0062A8A7 /* Customer */,
@@ -471,6 +484,24 @@
 			path = ReviewCell;
 			sourceTree = "<group>";
 		};
+		67D010CC2938BC85000AF56E /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				67D010CD2938BC9F000AF56E /* QRViewController.swift */,
+				67D010CE2938BC9F000AF56E /* QRViewController.xib */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		67FF0F7D2936FAD70003B22A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				67FF0F7F2936FAD70003B22A /* BaseViewController.swift */,
+				67FF0F802936FAD70003B22A /* TabbarBase.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -546,6 +577,7 @@
 				6753ACA728FECBE200BD9426 /* DetailFoodViewController.xib in Resources */,
 				678144F5292C99110060A7EF /* FavouriteFoodViewController.xib in Resources */,
 				6753ACDC28FEE91500BD9426 /* MenuCollectionViewCell.xib in Resources */,
+				67D010D02938BC9F000AF56E /* QRViewController.xib in Resources */,
 				6735A64728F17C73003EBFF9 /* CustomBestSellerCollectionViewCell.xib in Resources */,
 				6753ACB528FEDDB900BD9426 /* RestaurantHomeViewController.xib in Resources */,
 				6735A63E28F17229003EBFF9 /* OrderFoodViewController.xib in Resources */,
@@ -574,11 +606,13 @@
 				67A7145528EB4F7A0062A8A7 /* HomePageViewController.swift in Sources */,
 				6753ACB428FEDDB900BD9426 /* RestaurantHomeViewController.swift in Sources */,
 				6753AC9C28FEC3CD00BD9426 /* FavouriteViewController.swift in Sources */,
+				67FF0F822936FAD80003B22A /* BaseViewController.swift in Sources */,
 				67B6635428F5A4CC00D5D981 /* ReviewCollectionViewCell.swift in Sources */,
 				67A7145A28EB568C0062A8A7 /* CustomVisitedCollectionViewCell.swift in Sources */,
 				6735A63328F09CB0003EBFF9 /* YourMenuViewController.swift in Sources */,
 				6753ACD628FEE8F100BD9426 /* HeaderMenuCell.swift in Sources */,
 				6753AD04290390FD00BD9426 /* Order_Restaurant_Model.swift in Sources */,
+				67D010CF2938BC9F000AF56E /* QRViewController.swift in Sources */,
 				6753ACBD28FEDDCF00BD9426 /* EditInfomationCustomerViewController.swift in Sources */,
 				6753ACA628FECBE200BD9426 /* DetailFoodViewController.swift in Sources */,
 				678144F9292C9C6F0060A7EF /* General.swift in Sources */,
@@ -591,8 +625,10 @@
 				6735A62E28F08DC9003EBFF9 /* TabBarController.swift in Sources */,
 				6753ACDB28FEE91500BD9426 /* MenuCollectionViewCell.swift in Sources */,
 				6753ACD128FEE73900BD9426 /* MenuRestaurantViewController.swift in Sources */,
+				67FF0F7C2936FA970003B22A /* NavigationBase.swift in Sources */,
 				6735A64628F17C73003EBFF9 /* CustomBestSellerCollectionViewCell.swift in Sources */,
 				6735A62528F07E30003EBFF9 /* RoundCollectionViewCell.swift in Sources */,
+				67FF0F832936FAD80003B22A /* TabbarBase.swift in Sources */,
 				67A7143228EB159E0062A8A7 /* AppDelegate.swift in Sources */,
 				6753ACAE28FED36B00BD9426 /* CustomFavouriteCollectionViewCell.swift in Sources */,
 				6735A63D28F17229003EBFF9 /* OrderFoodViewController.swift in Sources */,

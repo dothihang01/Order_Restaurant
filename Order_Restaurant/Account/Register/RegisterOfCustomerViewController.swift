@@ -34,7 +34,7 @@ class RegisterOfCustomerViewController: UIViewController {
     
     @IBAction func btnRegister(_ sender: UIButton) {
         
-        let name = inputNameRegister.text ?? ""
+        let name = "\(getAccountRes?.restaurantId)"
         let password = inputPasswordRegister.text ?? ""
         
         let data = name.data(using: .ascii, allowLossyConversion: false)
