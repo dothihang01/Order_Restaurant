@@ -24,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-ZS-Wxp">
-                    <rect key="frame" x="106.66666666666669" y="84" width="177" height="23"/>
+                    <rect key="frame" x="106.66666666666669" y="64" width="177" height="23"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEn-GP-R44">
-                    <rect key="frame" x="20" y="147" width="350" height="80"/>
+                    <rect key="frame" x="20" y="107" width="350" height="80"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Ellipse 4" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-Hq-SR5">
                             <rect key="frame" x="10" y="10" width="60" height="60"/>
@@ -79,7 +79,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Lkr-yC-1t9">
-                    <rect key="frame" x="16" y="257" width="358" height="120"/>
+                    <rect key="frame" x="16" y="217" width="358" height="120"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X88-OK-tyg">
                             <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="120"/>
@@ -163,7 +163,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGk-hk-5ff">
-                    <rect key="frame" x="20" y="716" width="350" height="48"/>
+                    <rect key="frame" x="20" y="487" width="350" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="Vnw-EH-uzj"/>
                     </constraints>
@@ -174,26 +174,26 @@
                     </buttonConfiguration>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPy-9a-JdA">
-                    <rect key="frame" x="95" y="427" width="200" height="200"/>
+                    <rect key="frame" x="155" y="387" width="80" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="QuC-Ve-q9l"/>
-                        <constraint firstAttribute="height" constant="200" id="ZuF-5x-8gm"/>
+                        <constraint firstAttribute="width" constant="80" id="QuC-Ve-q9l"/>
+                        <constraint firstAttribute="height" constant="80" id="ZuF-5x-8gm"/>
                     </constraints>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Gck-ZS-Wxp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="1j9-hW-EL0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bGk-hk-5ff" secondAttribute="bottom" constant="46" id="4XV-Ra-six"/>
+                <constraint firstItem="Gck-ZS-Wxp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="1j9-hW-EL0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dEn-GP-R44" secondAttribute="trailing" constant="20" id="4gs-VV-Wv8"/>
-                <constraint firstItem="dEn-GP-R44" firstAttribute="top" secondItem="Gck-ZS-Wxp" secondAttribute="bottom" constant="40" id="7cZ-ra-wNY"/>
+                <constraint firstItem="dEn-GP-R44" firstAttribute="top" secondItem="Gck-ZS-Wxp" secondAttribute="bottom" constant="20" id="7cZ-ra-wNY"/>
                 <constraint firstItem="Lkr-yC-1t9" firstAttribute="top" secondItem="dEn-GP-R44" secondAttribute="bottom" constant="30" id="Erd-sj-DS5"/>
                 <constraint firstItem="Lkr-yC-1t9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MxR-zN-PwM"/>
                 <constraint firstItem="bPy-9a-JdA" firstAttribute="top" secondItem="Lkr-yC-1t9" secondAttribute="bottom" constant="50" id="Q4C-x8-dup"/>
                 <constraint firstItem="bPy-9a-JdA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R9C-Ud-eh7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGk-hk-5ff" secondAttribute="trailing" constant="20" id="UkE-9h-tsx"/>
                 <constraint firstItem="Gck-ZS-Wxp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VKI-u2-dVA"/>
+                <constraint firstItem="bGk-hk-5ff" firstAttribute="top" secondItem="bPy-9a-JdA" secondAttribute="bottom" constant="20" id="Wj6-3E-yxh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkr-yC-1t9" secondAttribute="trailing" constant="16" id="nVo-fp-PzL"/>
                 <constraint firstItem="dEn-GP-R44" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="s5h-Kf-fpL"/>
                 <constraint firstItem="bGk-hk-5ff" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="t0F-hc-dWt"/>

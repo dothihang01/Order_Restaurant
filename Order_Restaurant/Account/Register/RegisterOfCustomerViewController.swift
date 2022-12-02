@@ -19,6 +19,7 @@ class RegisterOfCustomerViewController: UIViewController {
     var delegate: AddAccountDelegate?
     
     var listRegister: [Restaurant] = []
+    var checkAccount: Account?
     var getAccountRes: Restaurant?
     var getCustomer: Customer?
     var isSelectedCustomer = false

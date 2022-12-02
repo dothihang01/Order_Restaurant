@@ -87,249 +87,57 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D390E5E-88D1-44F6-B7C8-9D06BCC16F24"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Login/Main.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "loginAccount(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5F750B9C-4CBD-4E89-9FB0-6FAC41C397EF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Login/Main.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "loginAccount(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "46B669A5-7F21-4841-A685-F160218F0900"
+            uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+            filePath = "Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "59BAC036-17AF-4C38-987C-4911AC8CE805"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "reStart()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F97F67CA-C822-4B93-901E-264B02311E36"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "ScannerViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "994812EA-1B51-4744-9168-947590099D97"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EB533FAF-4398-4A49-96AA-466AF48E8FB0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3136FD71-040B-4A84-929B-51598F1751DE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "metadataOutput(_:didOutput:from:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3136FD71-040B-4A84-929B-51598F1751DE - d20a466810241b40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.metadataOutput(_: __C.AVCaptureMetadataOutput, didOutput: Swift.Array&lt;__C.AVMetadataObject&gt;, from: __C.AVCaptureConnection) -&gt; ()"
-                  moduleName = "Order_Restaurant"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "272">
-               </Location>
-               <Location
-                  uuid = "3136FD71-040B-4A84-929B-51598F1751DE - d20a466810241b40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.metadataOutput(_: __C.AVCaptureMetadataOutput, didOutput: Swift.Array&lt;__C.AVMetadataObject&gt;, from: __C.AVCaptureConnection) -&gt; ()"
-                  moduleName = "Order_Restaurant"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "348">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C4B1F5C3-2A48-4FF2-8404-145E910688CD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "found(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "43806C02-C1A2-4872-AFBC-0EB041A00D87"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "found(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "ScannerViewController"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "RestaurantHomeViewController"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260 - c5cdb21a035b3014"
+                  uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73 - 8afc6d5a98f6f032"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.code.getter : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "Order_Restaurant.RestaurantHomeViewController.aRestaurant.getter : Swift.Optional&lt;Order_Restaurant.Restaurant&gt;"
                   moduleName = "Order_Restaurant"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "100">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "88">
                </Location>
                <Location
-                  uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260 - 1bc9a8ec6dbae060"
+                  uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73 - 31e24ef61f5be026"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.code.setter : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "Order_Restaurant.RestaurantHomeViewController.aRestaurant.setter : Swift.Optional&lt;Order_Restaurant.Restaurant&gt;"
                   moduleName = "Order_Restaurant"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "136">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260 - ac1c2a5f1d79f7ab"
+                  uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73 - 385045610282a645"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.code.modify : Swift.Optional&lt;Swift.String&gt;"
+                  symbolName = "Order_Restaurant.RestaurantHomeViewController.aRestaurant.modify : Swift.Optional&lt;Order_Restaurant.Restaurant&gt;"
                   moduleName = "Order_Restaurant"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -337,49 +145,49 @@
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260 - 38424c0c76bd0f16"
+                  uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73 - be14390af3c457a2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.code.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "Order_Restaurant.RestaurantHomeViewController.aRestaurant.modify : Swift.Optional&lt;Order_Restaurant.Restaurant&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "Order_Restaurant"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260 - a4b0bd4a5b54c0a4"
+                  uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73 - 747f7a3bb0a8c95e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Order_Restaurant.ScannerViewController"
+                  symbolName = "Order_Restaurant.RestaurantHomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Order_Restaurant.RestaurantHomeViewController"
                   moduleName = "Order_Restaurant"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "276">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "324">
                </Location>
                <Location
-                  uuid = "1E0DB0C4-1A13-4673-8FD9-FA144F049260 - b08bf8fa78459977"
+                  uuid = "E83A6DC7-E7BC-437C-90C2-DF879E44BE73 - b2790c5fad433f98"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Order_Restaurant.ScannerViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Order_Restaurant.ScannerViewController&gt;"
+                  symbolName = "Order_Restaurant.RestaurantHomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Order_Restaurant.RestaurantHomeViewController&gt;"
                   moduleName = "Order_Restaurant"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+                  urlString = "file:///Users/nguyenhung/Downloads/Hang/Projects/Order_Restaurant/Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "252">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "300">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -387,16 +195,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F3618A3-8511-48AC-93E0-6C19ED093714"
+            uuid = "CB9D0640-71C6-4FB6-B19A-1ABAE5889C8C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Order_Restaurant/Account/Scanner/ScannerViewController.swift"
+            filePath = "Order_Restaurant/Restaurant/RestaurantHomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "scannerButton(_:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

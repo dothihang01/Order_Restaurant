@@ -59,17 +59,18 @@ class Main: UIViewController, UITextViewDelegate {
                 accountCus = login
             }
         }
-        
-        if account == nil || accountCus == nil {
+        if account == nil && accountCus == nil {
             displayMyAlertMessage(userMessage: "Vui lòng nhập lại!!!")
         } else {
-            if account?.account?.typeAccount == 0 {
-                self.navigationController?.pushViewController(homeCustomer, animated: true)
-                displayMyAlertMessage(userMessage: "Đăng nhập thành công!!!")
-            } else if accountCus?.account?.typeAccount == 1 {
+            print("abc")
+            if account?.account?.typeAccount == 1 {
                 self.navigationController?.pushViewController(homeRestaurant, animated: true)
                 homeRestaurant.aRestaurant = account
                 displayMyAlertMessage(userMessage: "Đăng nhập thành công!!!")
+            } else if accountCus?.account?.typeAccount == 0 {
+                self.navigationController?.pushViewController(homeCustomer, animated: true)
+                displayMyAlertMessage(userMessage: "Đăng nhập thành công!!!")
+
             }
         }
         

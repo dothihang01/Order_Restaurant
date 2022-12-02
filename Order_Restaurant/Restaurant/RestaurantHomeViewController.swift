@@ -16,20 +16,27 @@ class RestaurantHomeViewController: UIViewController {
     @IBOutlet weak var lblAddress: UILabel!
 //    var listRestaurant: [Restaurant] = []
     var aRestaurant: Restaurant?
+    var filter: CIFilter!
     
-//    var restaurants: Restaurant? {
-//           didSet {
-//               if isViewLoaded {
-//                   lblName.text = restaurants?.restaurantName
-//                   lblDesc.text = restaurants?.restaurantDescription
-//                   lblAddress.text = restaurants?.restaurantAddress
-//               }
-//           }
-//       }
+    var restaurants: Restaurant? {
+           didSet {
+               if isViewLoaded {
+                   lblName.text = restaurants?.restaurantName
+                   lblDesc.text = restaurants?.restaurantDescription
+                   lblAddress.text = restaurants?.restaurantAddress
+               }
+           }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createDataRestaurant()
+        let name = "\(aRestaurant?.restaurantId)"
+        let data = name.data(using: .ascii, allowLossyConversion: false)
+        filter = CIFilter(name: "CIQRCodeGenerator")
+        filter.setValue(data, forKey: "inputMessage")
+        let img = UIImage(ciImage: filter.outputImage!)
+            imgQr.image = img
     }
     
     override func viewWillAppear(_ animated: Bool) {
